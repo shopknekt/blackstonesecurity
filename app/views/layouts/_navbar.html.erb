@@ -30,6 +30,16 @@
                      <li class="menu-item-simple-parent">
                         <%= link_to "Contact Us", contact_path %>
                      </li>
+                     <% if  user_signed_in? %>
+
+        <li class="menu-item-simple-parent">
+           <%= link_to 'Logout', destroy_user_session_path, :method => :delete  %>
+        </li>
+        <% else %>
+        <li class="menu-item-simple-parent">
+           <%= link_to 'Login', new_user_session_path %>
+        </li>
+      <% end %>
                   </ul>
                </nav>
             </div>
