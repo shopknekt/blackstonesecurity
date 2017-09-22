@@ -1,11 +1,17 @@
 Rails.application.routes.draw do
 
+
  
-	root 'pages#index'
+  root 'pages#index'
 	# devise_for :users
 
 	devise_for :users
+	get '/admin' => "admin#index"
 
+	resources :contacts
+	resources :testimonials
+	resources :abouts
+	resources :services
 
 	get 'about', to: 'pages#about'
 	get 'contact', to: 'pages#contact'

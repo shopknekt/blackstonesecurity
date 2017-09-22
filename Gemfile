@@ -10,13 +10,12 @@ gem 'bootstrap-sass'
 gem 'toastr-rails'
 gem 'font-awesome-rails'
 gem 'social-share-button'
-
+gem "paperclip"
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
-# gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
 
