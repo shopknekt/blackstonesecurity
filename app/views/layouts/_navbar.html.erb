@@ -1,0 +1,39 @@
+<header id="header" class="type1">
+   <div class="container">
+      <div class="main-menu-container">
+         <div class="main-menu">
+            <div id="logo">
+               <a title="NeoCut" href="index.html">
+               <%= image_tag("logo.png", alt: "blackstone security logo") %>
+               </a>
+            </div>
+            <div class="dt-sc-header-shape"><a class="dt-sc-button medium alignright" href="appointment.html">Phone:- +91 8951411747</a><span class="hexagon"> <span class="corner1"></span><span class="corner2"></span></span></div>
+            <div id="primary-menu">
+               <div class="dt-menu-toggle" id="dt-menu-toggle">Menu<span class="dt-menu-toggle-icon"></span></div>
+               <nav id="main-menu">
+                  <ul class="menu">
+                     <li class="current_page_item menu-item-simple-parent">
+                        <%= link_to root_path do %>Home<% end %>
+                     </li>
+                     <li class="dropdown menu-item-simple-parent">
+                        <a href="portfolio.html">Services</a>
+                        <ul class="sub-menu">
+                           <li><a href="portfolio.html">SECURITY SERVICES</a></li>
+                           <li><a href="portfolio-detail.html">FACILITIES SERVICES</a></li>
+                           <li><a href="portfolio-detail-lhs.html">RECEPTION SERVICES</a></li>
+                        </ul>
+                        <a class="dt-menu-expand">+</a>
+                     </li>
+                     <li class="menu-item-simple-parent">
+                        <%= link_to "About Us",about_path %>
+                     </li>
+                     <li class="menu-item-simple-parent">
+                        <%= link_to "Contact Us", contact_path %>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
