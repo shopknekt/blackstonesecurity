@@ -1289,3 +1289,9 @@
 	/* *** Animate *** */ 
 	.animate { opacity: 0; }
 	.animated { opacity: 1 !important; }
+
+	.z-btn{
+	color: #fff;
+    padding: 7px 31px;
+    background: #655cdd;
+	}
