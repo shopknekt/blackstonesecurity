@@ -168,7 +168,12 @@
             </div>
          </div>
       </div>
+       <% if user_signed_in? %>
+        <%= link_to "Edit", edit_service_path(service), class: "btn btn-success" %>
+        <%= link_to "Delete", service_path(service), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
    <% end %>
+   
    </div>
 </div>
 <div class="clear"></div>
@@ -202,7 +207,7 @@
                      </div>
                   </div>
                </li>
-            <% end %>
+               <% end %>
             </ul>
          </div>
          <div class="hr-invisible"></div>
@@ -249,13 +254,13 @@
       <div class="icon">
          <span class="hexagon">
             <span class="corner1"></span>
-            <span class="corner2"></span>    
+            <span class="corner2"></span>
             <img src="<%= asset_url ('logo.png') %>" style="width: 90px;" alt="" title="" />
             <span class="hexagon1">
                <span class="corner1"></span>
-               <span class="corner2"></span>          
-            </span> 
-         </span>           
+               <span class="corner2"></span>
+            </span>
+         </span>
       </div>
    </div>
    <div class="news-letter center">

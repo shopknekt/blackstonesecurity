@@ -18,20 +18,19 @@
       <li class="dropdown menu-item-simple-parent">
        <%= link_to root_path do%>Services<% end %>
         <ul class="sub-menu">
-         <li><%= link_to services_path do%>SECURITY SERVICES<% end %></li>
-         <li><%= link_to root_path do%>FACILITIES SERVICES<% end %></li>
-         <li><%= link_to root_path do%>RECEPTION SERVICES<% end %></li>
+        <% Service.all.each do |service|%>
+         <li><%= link_to "#{service.title}", service_path(service) %></li>
+        <% end %>
        </ul>
        <a class="dt-menu-expand">+</a>
      </li>
      <li class="menu-item-simple-parent">
       <%= link_to "About Us",abouts_path %>
     </li>
-    <li class="menu-item-simple-parent">
-      <%= link_to "Contact Us", contacts_path %>
-    </li>
     <% if  user_signed_in? %>
-
+    <li class="menu-item-simple-parent">
+      <%= link_to "Leads", contacts_path %>
+    </li>
     <li class="menu-item-simple-parent">
      <%= link_to 'Logout', destroy_user_session_path, :method => :delete  %>
    </li>
