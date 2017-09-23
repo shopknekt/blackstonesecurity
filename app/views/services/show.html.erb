@@ -1,0 +1,126 @@
+<div class="container">                     
+    <div class="dt-sc-tabs-container animate animated fadeInLeft" data-delay="100" data-animation="animated fadeInLeft">
+        <br /><br /><br />
+        <h3 class="border-title">
+            Services
+        </h3>
+
+        <p>
+            BlackStone Security understands the market and we have devised a range of adaptable services to meet ever-changing demands. These include:
+        </p>
+        <div class="clear"></div>
+        <ul class="dt-sc-tabs-frame">
+            <% @services.each do |service| %>   
+            <li><%= link_to service_path(service), class: "dt-sc-animation-eff1 current" do %> <%= service.title %> <% end %></li>
+            <% end %>
+        </ul>                            
+        <div class="dt-sc-tabs-frame-content" style="display: block;">
+            <div>
+            	<%= image_tag @service.image.url, style: "margin: 0 auto; display: block" %>
+                <p>
+                    <%= @service.description %>
+                </p>
+            </div>
+
+            <div class="hr-invisible-medium"></div>
+            <div class="column dt-sc-one-third first">
+                <div class="dt-sc-ico-content type3 animate" data-delay="100" data-animation="animated fadeIn">
+                    <div class="icon">
+                        <img src="<%= asset_url('1.jpg') %>" alt="" title="" /> 
+                    </div>
+                    <h3>
+                        <a target="_blank" href="#"> Retail Business Premises </a>
+                    </h3>
+                </div>    
+            </div>
+            <div class="column dt-sc-one-third">
+                <div class="dt-sc-ico-content type3 animate" data-delay="300" data-animation="animated fadeIn">
+                    <div class="icon">   
+                        <img src="<%= asset_url('2.jpg') %>" alt="" title="" />                
+                    </div>
+                    <h3>
+                        <a target="_blank" href="#"> Hotels </a>
+                    </h3>
+                </div>
+            </div>
+            <div class="column dt-sc-one-third">
+                <div class="dt-sc-ico-content type3 animate" data-delay="500" data-animation="animated fadeIn">
+                    <div class="icon">    
+                        <img src="<%= asset_url('3.jpg') %>" alt="" title="" />
+                    </div>
+                    <h3>
+                        <a target="_blank" href="#"> Schools/Educational Institutions </a>
+                    </h3>                           
+                </div>
+            </div>
+            <div class="hr-invisible-medium"></div>
+            <div class="column dt-sc-one-third first">
+                <div class="dt-sc-ico-content type3 animate" data-delay="100" data-animation="animated fadeIn">
+                    <div class="icon">
+                        <img src="<%= asset_url('4.jpg') %>" alt="" title="" /> 
+                    </div>
+                    <h3>
+                        <a target="_blank" href="#"> Apartments </a>
+                    </h3>
+                </div>    
+            </div>
+            <div class="column dt-sc-one-third">
+                <div class="dt-sc-ico-content type3 animate" data-delay="300" data-animation="animated fadeIn">
+                    <div class="icon">   
+                        <img src="<%= asset_url('5.jpg') %>" alt="" title="" />                
+                    </div>
+                    <h3>
+                        <a target="_blank" href="#"> Residences  </a>
+                    </h3>
+                </div>
+            </div>
+            <div class="column dt-sc-one-third">
+                <div class="dt-sc-ico-content type3 animate" data-delay="500" data-animation="animated fadeIn">
+                    <div class="icon">    
+                        <img src="<%= asset_url('6.jpg') %>" alt="" title="" />
+                    </div>
+                    <h3>
+                        <a target="_blank" href="#"> Construction Sites </a>
+                    </h3>                           
+                </div>
+            </div>
+            <div class="hr-invisible-medium"></div>
+            <div class="column dt-sc-one-third first">
+                <div class="dt-sc-ico-content type3 animate" data-delay="100" data-animation="animated fadeIn">
+                    <div class="icon">
+                        <img src="<%= asset_url('7.jpg') %>" alt="" title="" /> 
+                    </div>
+                    <h3>
+                        <a target="_blank" href="#"> Factories/Industries </a>
+                    </h3>
+                </div>    
+            </div>
+            <div class="column dt-sc-one-third">
+                <div class="dt-sc-ico-content type3 animate" data-delay="300" data-animation="animated fadeIn">
+                    <div class="icon">   
+                        <img src="<%= asset_url('8.jpg') %>" alt="" title="" />                
+                    </div>
+                    <h3>
+                        <a target="_blank" href="#"> Hospitals </a>
+                    </h3>
+                </div>
+            </div>
+            <div class="column dt-sc-one-third">
+                <div class="dt-sc-ico-content type3 animate" data-delay="500" data-animation="animated fadeIn">
+                    <div class="icon">    
+                        <img src="<%= asset_url('9.jpg') %>" alt="" title="" />
+                    </div>
+                    <h3>
+                        <a target="_blank" href="#"> Shopping Malls </a>
+                    </h3>                           
+                </div>
+            </div>
+            <div class="hr-invisible-medium"></div>
+
+        </div>                            
+    </div>
+</div>
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>
+
+            <div class="hr-invisible-medium"></div>

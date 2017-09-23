@@ -153,42 +153,22 @@
       <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
          Our Services
       </h2>
+      <% Service.all.each do |service|%>
       <div class="column dt-sc-one-third first animate" data-delay="100" data-animation="animated fadeIn">
          <div class="dt-sc-service type1">
-            <h3><a href="#">Security Services</a></h3>
+            <h3><%= service.title%></h3>
             <figure class="gallery-thumb">
-               <img class="attachment-gallery-with-shape first-img" title="" alt="" src="<%= asset_url('ser2.jpg')%>">
-               <img class="attachment-gallery-with-shape second-img" title="" alt="" src="<%= asset_url('ser11.jpg')%>">
+               <%= link_to service_path(service)  do%>
+                <%= image_tag service.image.url, alt: "", class: "attachment-gallery-with-shape first-img"%>
+                <%= image_tag service.image.url, alt: "", class: "attachment-gallery-with-shape second-img"%>
+                <% end %>
             </figure>
             <div class="gallery-details">
-               <p>We take real pride in delivering the highest levels of service to our prestigious client base. With many years of industry expertise and knowledge, we ensure the right solution is delivered every time.</p>
+               <p><%= service.description%></p>
             </div>
          </div>
       </div>
-      <div class="column dt-sc-one-third animate" data-delay="300" data-animation="animated fadeIn">
-         <div class="dt-sc-service type1">
-            <h3><a href="#">Facilities Services</a></h3>
-            <figure class="gallery-thumb">
-               <img class="attachment-gallery-with-shape first-img" title="" alt="" src="<%= asset_url('ser3.jpg')%>">
-               <img class="attachment-gallery-with-shape second-img" title="" alt="" src="<%= asset_url('ser22.jpg')%>">
-            </figure>
-            <div class="gallery-details">
-               <p>The management of your facilities is safe in our hands. Working with a comprehensive range of qualified partners we are able to provide a service package that will accommodate your needs which will in turn enable you to concentrate more on the things that you need to.</p>
-            </div>
-         </div>
-      </div>
-      <div class="column dt-sc-one-third animate" data-delay="500" data-animation="animated fadeIn">
-         <div class="dt-sc-service type1">
-            <h3><a href="#">Reception Services</a></h3>
-            <figure class="gallery-thumb">
-               <img class="attachment-gallery-with-shape first-img" title="" alt="" src="<%= asset_url('ser1.jpg')%>">
-               <img class="attachment-gallery-with-shape second-img" title="" alt="" src="<%= asset_url('ser33.jpg')%>">
-            </figure>
-            <div class="gallery-details">
-               <p>Corporate Offices where BlackStone’s corporate reception teams are deployed, our clients can be reassured that their guests will be effortlessly assisted.</p>
-            </div>
-         </div>
-      </div>
+   <% end %>
    </div>
 </div>
 <div class="clear"></div>
@@ -197,82 +177,32 @@
       <div class="container">
          <div class="hr-invisible"></div>
          <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
-            Testimonials
+           TESTIMONIALS
          </h2>
          <div class="dt-sc-testimonial-carousel-wrapper">
             <ul class="dt-sc-testimonial-carousel">
+            <% Testimonial.all.each do |testominal|%>
                <li>
                   <div class="dt-sc-testimonial">
                      <blockquote>
-                        <q> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled to make a type specimen book. It has survived. </q>
+                        <q><%= testominal.description %></q>
                      </blockquote>
                      <div class="author">
                         <span class="hexagon2"></span> 
                         <div class="hexagon-image">
                            <div class="hexagon-in1">
-                              <div class="hexagon-in2 founder-image img1"></div>
+                              <div class="hexagon-in2 founder-image img1">
+                              <%= image_tag testominal.image.url, alt: ""%>
+                              </div>
                            </div>
                         </div>
                      </div>
                      <div class="author-detail">
-                        JESSICA <span> California </span>
+                     <%= testominal.name %>  <span> <%= testominal.place %> </span>
                      </div>
                   </div>
                </li>
-               <li>
-                  <div class="dt-sc-testimonial">
-                     <blockquote>
-                        <q> Standard dummy text ever since the 1500s, whwith the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </q>
-                     </blockquote>
-                     <div class="author">
-                        <span class="hexagon2"></span> 
-                        <div class="hexagon-image">
-                           <div class="hexagon-in1">
-                              <div class="hexagon-in2 founder-image img2"></div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="author-detail">
-                        MICKY WALLS <span> Newjershey </span>
-                     </div>
-                  </div>
-               </li>
-               <li>
-                  <div class="dt-sc-testimonial">
-                     <blockquote>
-                        <q> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled to make a type specimen book. It has survived. </q>
-                     </blockquote>
-                     <div class="author">
-                        <span class="hexagon2"></span> 
-                        <div class="hexagon-image">
-                           <div class="hexagon-in1">
-                              <div class="hexagon-in2 founder-image img3"></div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="author-detail">
-                        JESSICA <span> California </span>
-                     </div>
-                  </div>
-               </li>
-               <li>
-                  <div class="dt-sc-testimonial">
-                     <blockquote>
-                        <q> Standard dummy text ever since the 1500s, whwith the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </q>
-                     </blockquote>
-                     <div class="author">
-                        <span class="hexagon2"></span> 
-                        <div class="hexagon-image">
-                           <div class="hexagon-in1">
-                              <div class="hexagon-in2 founder-image img4"></div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="author-detail">
-                        MICKY WALLS <span> Newjershey </span>
-                     </div>
-                  </div>
-               </li>
+            <% end %>
             </ul>
          </div>
          <div class="hr-invisible"></div>
@@ -286,18 +216,21 @@
       Make a special Appointment
    </h2>
    <div class="container">
-      <form class="contact-form" method="post" name="enqform" action="php/send.php">
+
+      <%= form_tag("/contacts", method: "post") do %>
          <div class="column dt-sc-one-half first animate" data-delay="100" data-animation="animated fadeIn">
-            <p><input type="text" name="username" placeholder="Your Name (required)" required/> </p>
+            <p>
+               <input type="text" name="username" placeholder="Your Name (required)" required/> </p>
             <p><input type="email" name="txtemail" placeholder="Email (required)" required/></p>
          </div>
          <div class="column dt-sc-one-half animate" data-delay="300" data-animation="animated fadeIn">
-            <p><input type="text" required name="txtname" placeholder="Your Phone (required)"/></p>
-            <p><input id="datepicker" type="text" placeholder="Date of Appointment" value="" name="datepicker" required><span class="icon-date-picker fa fa-calendar"></span></p>
+            <p><input type="number" required name="txtname" placeholder="Your Phone (required)"/></p>
+            <p><input id="datepicker" type="date" placeholder="Date of Appointment" value="" name="datepicker" required><span class="icon-date-picker fa fa-calendar"></span></p>
          </div>
          <div class="column dt-sc-one-column animate" data-delay="500" data-animation="animated fadeIn">
             <p><textarea class="message" required rows="10" placeholder="Comments(required)" cols="5" name="txtmessage"></textarea></p>
-         </div>
+         </div> 
+
          <ul class="phone">
             <li><i class="fa fa-mobile-phone"></i>
                (03) 1234 5678
@@ -309,7 +242,7 @@
          <div class="form-row aligncenter">
             <input type="submit" value="submit" name="submit">
          </div>
-      </form>
+      <% end %>
       <div id="ajax_contactform_msg"> </div>
    </div>
    <div class="dt-sc-ico-content type1 select">
@@ -317,7 +250,7 @@
          <span class="hexagon">
             <span class="corner1"></span>
             <span class="corner2"></span>    
-            <img src="<%= asset_url ('logo.png') %>" style="width: 90px;" alt="" title="" />                 
+            <img src="<%= asset_url ('logo.png') %>" style="width: 90px;" alt="" title="" />
             <span class="hexagon1">
                <span class="corner1"></span>
                <span class="corner2"></span>          
