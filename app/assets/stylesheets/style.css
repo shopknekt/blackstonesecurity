@@ -422,25 +422,25 @@
 
 		/*----*****---- << Parallax >> ----*****----*/
 
-	.dt-sc-counters { background-image: url(http://placehold.it/1920x1200&text=Parallax+Image); }
-	.dt-sc-client-testimonial { background-image: url(http://placehold.it/1920x1200&text=Parallax+Image); }
-	.dt-sc-client-testimonial1 { background-image: url(http://placehold.it/1920x1200&text=Parallax+Image); }
-	.hexagon-in2.founder-image.img1 { background-image:url(http://placehold.it/90x90&text=Team+Image); }
-	.hexagon-in2.founder-image.img2 { background-image:url(http://placehold.it/90x90&text=Team+Image); }
-	.hexagon-in2.founder-image.img3 { background-image:url(http://placehold.it/90x90&text=Team+Image); }
-	.hexagon-in2.founder-image.img4 { background-image:url(http://placehold.it/90x90&text=Team+Image); }
-	.dt-sc-appointment-parallax { background-image: url(http://placehold.it/1920x1000&text=Parallax+Image); }
+	.dt-sc-counters { background-image: url(c.jpg); }
+	.dt-sc-client-testimonial { background-image: image-url(c.jpg); }
+	.dt-sc-client-testimonial1 { background-image: image-url(c.jpg); }
+	.hexagon-in2.founder-image.img1 { background-image:image-url(c.jpg); }
+	.hexagon-in2.founder-image.img2 { background-image:image-url(c.jpg); }
+	.hexagon-in2.founder-image.img3 { background-image:image-url(c.jpg); }
+	.hexagon-in2.founder-image.img4 { background-image:image-url(c.jpg); }
+	.dt-sc-appointment-parallax { background-image: image-url(c.jpg); }
 	.dt-sc-work-parallax { 
-		background: url(a.jpg);
+		background: image-url(a.jpg);
 		background-repeat: none;
 		background-size: cover;
 		background-attachment: fixed;
 	}
-	.dt-parallax.part-one { background-image: url(http://placehold.it/1920x1300&text=Parallax+Image); }
-	.dt-parallax.part-two { background-image: url(http://placehold.it/1920x1300&text=Parallax+Image); }
-	.dt-parallax.part-three { background-image: url(http://placehold.it/1920x1300&text=Parallax+Image); }
-	.dt-parallax.part-four { background-image: url(http://placehold.it/1920x1300&text=Parallax+Image); }
-	.dt-sc-ads-parallax { background-image: url(http://placehold.it/1920x1050&text=Parallax+Image); }
+	.dt-parallax.part-one { background-image: image-url(c.jpg); }
+	.dt-parallax.part-two { background-image: image-url(c.jpg); }
+	.dt-parallax.part-three { background-image: image-url(c.jpg); }
+	.dt-parallax.part-four { background-image: image-url(c.jpg); }
+	.dt-sc-ads-parallax { background-image: image-url(c.jpg); }
 	
 	
 		/*----*****---- << 03. Services >> ----*****----*/
