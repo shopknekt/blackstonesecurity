@@ -1,6 +1,7 @@
+
 class ServicesController < ApplicationController
+  before_action :authenticate_user!, only:[:edit, :update, :destroy]
   before_action :set_service, only: [:show, :edit, :update, :destroy]
-   before_action :authenticate_user!, only:[:edit, :update, :destroy]
   # GET /services
   # GET /services.json
   def index
@@ -10,7 +11,9 @@ class ServicesController < ApplicationController
   # GET /services/1
   # GET /services/1.json
   def show
+    @services = Service.all
   end
+
 
   # GET /services/new
   def new
@@ -25,7 +28,6 @@ class ServicesController < ApplicationController
   # POST /services.json
   def create
     @service = Service.new(service_params)
-    logger.info(@service)
     respond_to do |format|
       if @service.save
         format.html { redirect_to @service, notice: 'Service was successfully created.' }

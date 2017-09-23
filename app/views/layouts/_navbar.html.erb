@@ -16,11 +16,11 @@
         <%= link_to root_path do %>Home<% end %>
       </li>
       <li class="dropdown menu-item-simple-parent">
-        <a href="portfolio.html">Services</a>
+       <%= link_to root_path do%>Services<% end %>
         <ul class="sub-menu">
-         <li><a href="portfolio.html">SECURITY SERVICES</a></li>
-         <li><a href="portfolio-detail.html">FACILITIES SERVICES</a></li>
-         <li><a href="portfolio-detail-lhs.html">RECEPTION SERVICES</a></li>
+         <li><%= link_to services_path do%>SECURITY SERVICES<% end %></li>
+         <li><%= link_to root_path do%>FACILITIES SERVICES<% end %></li>
+         <li><%= link_to root_path do%>RECEPTION SERVICES<% end %></li>
        </ul>
        <a class="dt-menu-expand">+</a>
      </li>

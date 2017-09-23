@@ -1,19 +1,26 @@
 Rails.application.routes.draw do
 
 
- 
-  root 'pages#index'
+
+	root 'pages#index'
 	# devise_for :users
 
 	devise_for :users
-	get '/admin' => "admin#index"
+	# get '/admin' => "admin#index"
+
+
+	# namespace :admin do
+		
+	# end
 
 	resources :contacts
 	resources :testimonials
-	resources :abouts
 	resources :services
+	resources :abouts
 
-	get 'about', to: 'pages#about'
+
+
+	# get 'about', to: 'pages#about'
 	get 'contact', to: 'pages#contact'
 	get '404', to: 'pages#404'
 
