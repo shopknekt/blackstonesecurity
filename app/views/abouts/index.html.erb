@@ -1,86 +1,107 @@
 
- <div id="main"><!-- Main  -->
+<div id="main"><!-- Main  -->
   <section class="fullwidth-background">
     <div class="breadcrumb-wrapper">
-            <div class="container">
-               <div class="breadcrumb">
-                  <a href="index.html">Home</a>
-                    <span class="fa fa-angle-right"> </span>
-                    <h4>About Us</h4>
-                    <h5 class="breadcrumb-title">About Us</h5>
-               </div>
-            </div>
+        <div class="container">
+         <div class="breadcrumb">
+          <%= link_to root_path do%>Home<% end %>
+          <span class="fa fa-angle-right"> </span>
+          <h4>About Us</h4>
+          <h5 class="breadcrumb-title">About Us</h5>
+      </div>
+  </div>
+</div>
+</section>
+<div class="hr-invisible"></div>
+<div class="clear"></div>
+<% if user_signed_in? %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <%= link_to "Create New About", new_about_path, class: "z-back"%>
         </div>
-    </section>
-    <div class="hr-invisible"></div>
-    <div class="clear"></div>
-    <section id="primary" class="content-full-width">
+    </div>
+</div>
+<% end %>
+<section id="primary" class="content-full-width">
     <% @abouts.where(title: :About).each do |about| %>
-      <div class="container">
-          <h2 class="border-title aligncenter">
-                <%= about.title %>
-            </h2>
-            <div class="column dt-sc-one-half first">
-                <p>
-                 <%= about.description %>
-                </p>
-            </div>
-            <div class="column dt-sc-one-half">
-            <%= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
-            </div>
-        </div>
-        <% if user_signed_in? %>
-        <%= link_to "Edit", edit_about_path(about) %>
-        <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
-        <% end %>
+    <div class="container">
+      <h2 class="border-title aligncenter">
+        <%= about.title %>
+    </h2>
+    <div class="column dt-sc-one-half first">
+        <p>
+           <%= about.description %>
+       </p>
+   </div>
+   <div class="column dt-sc-one-half">
+    <%= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
+</div>
+</div>
+<% if user_signed_in? %>
+<%= link_to "Edit", edit_about_path(about),class: "z-back" %>
+<%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
+<% end %>
+<% end %>
 
 
-        <div class="hr-invisible"></div>
-        <div class="fullwidth-section dt-sc-parallax-section dt-sc-work-parallax">
-          <div class="fullwidth-bg">
-                <div class="container">
-            <div class="hr-invisible"></div>
-            <div class="clear"></div>
-            <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
-                Why People Choose Us?
-            </h2>
-             <% @abouts.where(title: :OurMission).each do |about| %>
-            <div class="column dt-sc-one-half first animate" data-delay="100" data-animation="animated fadeInLeft">
-                <h3 class="border-title">
-                    <%= about.title %>
-                </h3> 
-                <div class="dt-sc-toggle-frame-set">
-                    <div class="dt-sc-frame">
-                        <div class="dt-sc-content">
-                            <p>
-                            <%= about.description %>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <% end %>
-        <div class="column dt-sc-one-half animate" data-delay="100" data-animation="animated fadeInRight">
-                 <% @abouts.where(title: :BUSINESSPRINCIPLES).each do |about| %>
-                <div class="dt-sc-tabs-container">
-                    <h3 class="border-title">
-                         <%= about.title %>
-                    </h3>
-                    <div class="clear"></div>
-                    <div class="dt-sc-tabs-frame">
-                        <p>
-                             <%= about.description %>
-                        </p>
-                    </div>
-                </div>
-                <% end %>
-            </div>
-        </div>
+<div class="hr-invisible"></div>
+<div class="fullwidth-section dt-sc-parallax-section dt-sc-work-parallax">
+  <div class="fullwidth-bg">
+    <div class="container">
         <div class="hr-invisible"></div>
         <div class="clear"></div>
-        <div class="hr-invisible"></div>
+        <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
+            Why People Choose Us?
+        </h2>
+        <% @abouts.where(title: :OurMission).each do |about| %>
+        <div class="column dt-sc-one-half first animate" data-delay="100" data-animation="animated fadeInLeft">
+            <h3 class="border-title">
+                <%= about.title %>
+            </h3> 
+            <div class="dt-sc-toggle-frame-set">
+                <div class="dt-sc-frame">
+                    <div class="dt-sc-content">
+                        <p>
+                            <%= about.description %>
+                        </p>
+                        <br/>
+                        <br/>
+                        <% if user_signed_in? %>
+                        <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
+                        <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% end %>
+        <div class="column dt-sc-one-half animate" data-delay="100" data-animation="animated fadeInRight">
+           <% @abouts.where(title: :BUSINESSPRINCIPLES).each do |about| %>
+           <div class="dt-sc-tabs-container">
+            <h3 class="border-title">
+               <%= about.title %>
+           </h3>
+           <div class="clear"></div>
+           <div class="dt-sc-tabs-frame">
+            <p>
+               <%= about.description %>
+           </p>
+           <br/>
+           <br/>
+           <% if user_signed_in? %>
+           <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
+           <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
+           <% end %>
+       </div>
+   </div>
+   <% end %>
+</div>
+</div>
+<div class="hr-invisible"></div>
+<div class="clear"></div>
+<div class="hr-invisible"></div>
 
-        
+
 
 

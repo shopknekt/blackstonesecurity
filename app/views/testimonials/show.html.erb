@@ -1,3 +1,4 @@
+<div class="container" style="padding: 50px;">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -19,6 +20,10 @@
   <strong>Place:</strong>
   <%= @testimonial.place %>
 </p>
+<br/>
+<br/>
+<br/>
+<%= link_to 'Edit', edit_testimonial_path(@testimonial), class: "z-back" %> 
 
-<%= link_to 'Edit', edit_testimonial_path(@testimonial) %> |
-<%= link_to 'Back', testimonials_path %>
+<%= link_to 'Back', testimonials_path, class: "z-back" %>
+</div>
