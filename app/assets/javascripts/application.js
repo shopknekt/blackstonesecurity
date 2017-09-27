@@ -12,11 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor/init
 //= require bootstrap-sprockets
 //= require toastr
 //= require turbolinks
+
+
+
 
 //= require jquery-migrate.min
 //= require layerslider
 //= require jsplugins
 //= require custom 
+
+

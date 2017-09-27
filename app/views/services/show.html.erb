@@ -8,18 +8,30 @@
         <p>
             BlackStone Security understands the market and we have devised a range of adaptable services to meet ever-changing demands. These include:
         </p>
+        <% if user_signed_in? %>
+        <%= link_to "New Service", new_service_path(@service), class: "btn btn-success z-btn"%>
+        <% end %>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <div class="clear"></div>
         <ul class="dt-sc-tabs-frame">
             <% @services.each do |service| %>   
-            <li><%= link_to service_path(service), class: "dt-sc-animation-eff1 current" do %> <%= service.title %> <% end %></li>
+            <li><%= link_to service_path(service), class: "dt-sc-animation-eff1 current" do %> <%= service.title %> <% end %>
+            </li>
             <% end %>
-        </ul>                            
+        </ul>
         <div class="dt-sc-tabs-frame-content" style="display: block;">
             <div>
             	<%= image_tag @service.image.url, style: "margin: 0 auto; display: block" %>
                 <p>
                     <%= @service.description %>
                 </p>
+                <% if user_signed_in? %>
+                <%= link_to "Edit", edit_service_path(@service), class: "btn btn-success z-btn" %>
+                <%= link_to "Delete", service_path(@service), class: "btn btn-danger z-btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+                <% end %>
             </div>
 
             <div class="hr-invisible-medium"></div>
@@ -98,7 +110,7 @@
             <div class="column dt-sc-one-third">
                 <div class="dt-sc-ico-content type3 animate" data-delay="300" data-animation="animated fadeIn">
                     <div class="icon">   
-                        <img src="<%= asset_url('8.jpg') %>" alt="" title="" />                
+                        <img src="<%= asset_url('8.jpg') %>" alt="" title="" />
                     </div>
                     <h3>
                         <a target="_blank" href="#"> Hospitals </a>
@@ -112,15 +124,15 @@
                     </div>
                     <h3>
                         <a target="_blank" href="#"> Shopping Malls </a>
-                    </h3>                           
+                    </h3>
                 </div>
             </div>
             <div class="hr-invisible-medium"></div>
 
-        </div>                            
+        </div>
     </div>
 </div>
-<%= link_to 'Edit', edit_service_path(@service) %> |
-<%= link_to 'Back', services_path %>
+<%#= link_to 'Edit', edit_service_path(@service) %> |
+<%#= link_to 'Back', services_path %>
 
-            <div class="hr-invisible-medium"></div>
+<div class="hr-invisible-medium"></div>
