@@ -3447,7 +3447,8 @@ ul.dt-sc-social-network > li a {
 .dt-sc-portfolio-container {
     clear: both;
     float: left;
-    margin: 60px 0 padding: 0;
+    margin: 60px 0;
+    padding: 0;
     width: 100%;
 }
 .portfolio {
