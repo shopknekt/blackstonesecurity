@@ -74,7 +74,7 @@ h2.border-title.aligncenter {
     font-family: "Montserrat", sans-serif;
 }
 h2.border-title.aligncenter:before {
-    background: image-url(heading-bottom.png) no-repeat;
+    background-image: url(heading-bottom.png) no-repeat;
     content: "";
     height: 20px;
     left: 0;
@@ -388,7 +388,7 @@ code {
     padding: 400px 0;
 }
 .fullwidth-section.dt-service-hme {
-    background-image: image-url(txt-bg.png);
+    background-image: url(txt-bg.png);
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -1843,46 +1843,46 @@ ul.shop-times li:hover::after {
     background-image: url(c.jpg);
 }
 .dt-sc-client-testimonial {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .dt-sc-client-testimonial1 {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .hexagon-in2.founder-image.img1 {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .hexagon-in2.founder-image.img2 {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .hexagon-in2.founder-image.img3 {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .hexagon-in2.founder-image.img4 {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .dt-sc-appointment-parallax {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .dt-sc-work-parallax {
-    background: image-url(a.jpg);
+    background-image: url(a.jpg);
     background-repeat: none;
     background-size: cover;
     background-attachment: fixed;
 }
 .dt-parallax.part-one {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .dt-parallax.part-two {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .dt-parallax.part-three {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .dt-parallax.part-four {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 .dt-sc-ads-parallax {
-    background-image: image-url(c.jpg);
+    background-image: url(c.jpg);
 }
 /*----*****---- << 03. Services >> ----*****----*/
 
@@ -1916,7 +1916,7 @@ ul.shop-times li:hover::after {
     backface-visibility: inherit;
 }
 .dt-sc-service figure > .item-mask {
-    background-image: image-url(shape.png);
+    background-image: url(shape.png);
     background-size: 100% 100%;
     bottom: 0;
     left: 0;
@@ -2254,7 +2254,7 @@ table.dt-sc-rate tr:last-child td {
     padding: 0;
 }
 .dt-sc-service.content figure > .item-mask {
-    background-image: image-url(service-shape.png);
+    background-image: url(service-shape.png);
 }
 .dt-sc-service.content figure.gallery-thumb {
     height: 100%;
@@ -2546,7 +2546,7 @@ table.dt-sc-rate tr:last-child td {
     border: 5px double #eeeeee;
 }
 .dt-sc-testimonial blockquote q:after {
-    background-image: image-url(testimonial-shape2.png);
+    background-image: url(testimonial-shape2.png);
     background-repeat: no-repeat;
     bottom: -21px;
     content: "";
@@ -2556,7 +2556,7 @@ table.dt-sc-rate tr:last-child td {
     width: 25px;
 }
 .dt-sc-testimonial blockquote q:before {
-    background: image-url(quote.png) no-repeat;
+    background-image: url(quote.png) no-repeat;
     content: "";
     height: 50px;
     left: 0;
@@ -3026,7 +3026,7 @@ ul.commentlist li ul.children {
     background-color: #52595a;
     padding: 130px 0 0;
     position: relative;
-    background-image: image-url(ico-bg.png);
+    background-image: url(ico-bg.png);
 }
 .fullwidth-section.dt-sc-center:after {
     border-bottom: 52px solid #52595a;
@@ -3143,7 +3143,7 @@ ul.commentlist li ul.children {
     z-index: 999;
 }
 .widget.searchwidget .icon-search {
-    background-image: image-url(search-icon.png);
+    background-image: url(search-icon.png);
     min-height: 50px;
     min-width: 50px;
     position: absolute;
@@ -3222,7 +3222,7 @@ h4.date-title {
     color: #fff;
     text-align: center;
     border-radius: 0 5px 0 0;
-    background: image-url(date-bg.jpg) repeat;
+    background-image: url(date-bg.jpg) repeat;
     margin-bottom: 10px;
 }
 .date-select .date {
@@ -3476,7 +3476,7 @@ ul.dt-sc-social-network > li a {
     width: 100%;
     z-index: 9;
 }
-.fig-content span.image-overlay-inside {
+.fig-content span.overlay-inside {
     border-radius: 50px;
     color: #ffffff;
     font-size: 24px;
@@ -3514,7 +3514,7 @@ ul.dt-sc-social-network > li a {
     width: 40px;
     z-index: 9999;
 }
-.fig-content span.image-overlay-inside:before {
+.fig-content span.overlay-inside:before {
     position: absolute;
     height: 0;
     width: 70px;
@@ -3529,12 +3529,12 @@ ul.dt-sc-social-network > li a {
     font-family: FontAwesome;
 }
 @media screen and (min-width: 0\0) {
-    .fig-content span.image-overlay-inside:before {
+    .fig-content span.overlay-inside:before {
         width: 160px;
     }
 }
 ::i-block-chrome,
-.fig-content span.image-overlay-inside:before {
+.fig-content span.overlay-inside:before {
     width: 160px;
 }
 .fig-content span a {
@@ -3575,7 +3575,7 @@ ul.dt-sc-social-network > li a {
     line-height: 40px;
 }
 ::i-block-chrome,
-.fig-content span.image-overlay-inside {
+.fig-content span.overlay-inside {
     width: 100%;
 }
 ::i-block-chrome,
@@ -3770,11 +3770,11 @@ a.loadmore {
 .portfolio:hover figcaption {
     opacity: 1;
 }
-.zoom span.image-overlay-inside:before {
+.zoom span.overlay-inside:before {
     content: "\f03e";
     font-family: fontawesome;
 }
-.link span.image-overlay-inside:before {
+.link span.overlay-inside:before {
     content: "\f0c1";
     font-family: fontawesome;
 }
@@ -3800,7 +3800,7 @@ a.loadmore {
     top: -65%;
     width: 88px;
 }
-.fig-content a .hexagon:hover .image-overlay-inside:before {
+.fig-content a .hexagon:hover .overlay-inside:before {
     color: #000;
 }
 .fig-content a .hexagon {
@@ -3984,7 +3984,7 @@ a.btn-icon:hover i.fa {
     top: 0;
 }
 .dt-sc-timeline {
-    background: image-url(timeline_line.png) repeat-y scroll center top;
+    background-image: url(timeline_line.png) repeat-y scroll center top;
     display: inline-block;
     padding-top: 0;
     position: relative;
@@ -4063,7 +4063,7 @@ a.btn-icon:hover i.fa {
     -webkit-box-shadow: -10px 10px 0 0 #dec8a3;
     -o-box-shadow: -10px 10px 0 0 #dec8a3;
     -ms-box-shadow: -10px 10px 0 0 #dec8a3;
-    background: image-url(special-item.jpg);
+    background-image: url(special-item.jpg);
     float: left;
     height: 650px;
     position: relative;
@@ -4127,7 +4127,7 @@ a.btn-icon:hover i.fa {
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    background: image-url(main-bg.jpg) repeat;
+    background-image: url(main-bg.jpg) repeat;
 }
 .rounded-top-2:before,
 .rounded-top-2:after,
@@ -4143,7 +4143,7 @@ a.btn-icon:hover i.fa {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     z-index: -1;
-    background: image-url(main-bg.jpg) repeat;
+    background-image: url(main-bg.jpg) repeat;
 }
 .rounded-top:before {
     top: -25px;
@@ -4245,7 +4245,7 @@ a.btn-icon:hover i.fa {
     width: 100%;
 }
 .menu-heading h6 {
-    background: image-url(main-bg.jpg);
+    background-image: url(main-bg.jpg);
     font-weight: 700;
     display: inline-block;
     float: none;
@@ -4301,7 +4301,7 @@ a.btn-icon:hover i.fa {
     width: 20%;
 }
 .menu-footer {
-    background: image-url(main-bg.jpg);
+    background-image: url(main-bg.jpg);
     bottom: -30px;
     display: inline-block;
     float: none;
@@ -4315,7 +4315,7 @@ a.btn-icon:hover i.fa {
     z-index: 9999;
 }
 .menu-underline {
-    background: image-url(menu-footer.png) no-repeat;
+    background-image: url(menu-footer.png) no-repeat;
     display: inline-block;
     height: 25px;
     margin: 0 0 10px;
@@ -4491,7 +4491,7 @@ a.btn-icon:hover i.fa {
     -moz-border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
     border-radius: 4px 4px 0 0;
-    background: image-url(date-bg1.jpg) repeat 100% -1px;
+    background-image: url(date-bg1.jpg) repeat 100% -1px;
     padding: 8px 0 !important;
 }
 .ll-skin-latoja .ui-datepicker-title {
@@ -4501,11 +4501,11 @@ a.btn-icon:hover i.fa {
     text-shadow: 0 1px 1px rgba(255, 255, 255, .8);
 }
 .ll-skin-latoja .ui-icon-circle-triangle-e {
-    background-image: image-url(ui-icons_454545_256x240.png);
+    background-image: url(ui-icons_454545_256x240.png);
     background-position: -32px -16px;
 }
 .ll-skin-latoja .ui-icon-circle-triangle-w {
-    background-image: image-url(ui-icons_454545_256x240.png);
+    background-image: url(ui-icons_454545_256x240.png);
     background-position: -96px -16px;
 }
 .ll-skin-latoja .ui-datepicker .ui-datepicker-prev,
@@ -4664,7 +4664,7 @@ a.btn-icon:hover i.fa {
     height: 40px;
     border: none;
     text-indent: 100%;
-    background: image-url(ui.totop.png) no-repeat left top;
+    background-image: url(ui.totop.png) no-repeat left top;
     z-index: 9999;
     transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -4673,7 +4673,7 @@ a.btn-icon:hover i.fa {
     -webkit-transform: rotate(45deg);
 }
 #toTopHover {
-    background: image-url(ui.totop.png) no-repeat left -40px;
+    background-image: url(ui.totop.png) no-repeat left -40px;
     width: 40px;
     height: 40px;
     display: block;
@@ -4760,7 +4760,7 @@ a.btn-icon:hover i.fa {
     border-radius: 20px;
 }
 #haircut-style-picker .hr {
-    background: image-url(style-picker/seperator.png) no-repeat;
+    background-image: url(style-picker/seperator.png) no-repeat;
     max-width: 100%;
     height: 25px;
     margin: -10px 0px 10px;
@@ -4781,7 +4781,7 @@ a.btn-icon:hover i.fa {
     left: 225px;
 }
 .boxed {
-    background: image-url(style-picker/pattern1.jpg) repeat fixed;
+    background-image: url(style-picker/pattern1.jpg) repeat fixed;
 }
 .dt-sc-services-type1:hover span,
 .dt-sc-services-types2:hover span {
@@ -4795,7 +4795,7 @@ a.btn-icon:hover i.fa {
 /*----*****---- << 17. 404 >> ----*****----*/
 
 .error-404 {
-    background-image: image-url(error-bg.png);
+    background-image: url(error-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -5275,7 +5275,7 @@ figure.photostack-current::after {
     position: relative;
 }
 #footer .footer-links li {
-    background: image-url(footer-link-seperator.jpg) no-repeat scroll right center rgba(0, 0, 0, 0);
+    background-image: url(footer-link-seperator.jpg) no-repeat scroll right center rgba(0, 0, 0, 0);
     display: inline;
     line-height: 52px;
     margin-right: 14px;
