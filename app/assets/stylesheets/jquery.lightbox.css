@@ -127,7 +127,6 @@
     background-size: 28px auto;
     z-index: 1011;
     border-bottom-left-radius: 5px;
-    filter: alpha(opacity(40));
     opacity: 0.4;
     outline: none;
 }
