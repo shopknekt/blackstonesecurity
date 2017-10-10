@@ -108,7 +108,7 @@
          <% Service.all.each do |service|%>
          <div class="column dt-sc-one-third first animate" data-delay="100" data-animation="animated fadeIn">
             <div class="dt-sc-service type1">
-               <h3 style="color: #665dde;"><%= service.title%></h3>
+               <h4 style="color: #3cf5f3;"><%= service.title%></h4>
                <figure class="gallery-thumb">
                   <%= link_to service_path(service)  do%>
                   <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape first-img"%>
