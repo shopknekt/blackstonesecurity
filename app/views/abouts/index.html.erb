@@ -38,9 +38,11 @@
     <%= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
 </div>
 </div>
+<div class="container">
 <% if user_signed_in? %>
 <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
 <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
+</div>
 <% end %>
 <% end %>
 

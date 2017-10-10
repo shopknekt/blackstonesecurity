@@ -90,6 +90,7 @@ h3.border-title {
     font-size: 18px;
     margin-bottom: 50px;
     clear: both;
+    color: #fff;
 }
 h3.border-title.none:after,
 h3.border-title.none:before {
@@ -5313,9 +5314,9 @@ figure.photostack-current::after {
 }
 /* *** Animate *** */
 
-.animate {
-    opacity: 0;
-}
+// .animate {
+//     opacity: 0;
+// }
 .animated {
     opacity: 1 !important;
 }
@@ -5326,6 +5327,7 @@ figure.photostack-current::after {
 }
 .z-center {
     text-align: center;
+    color: #fff;
 }
 .z-action {
     margin: 0 auto;
@@ -5334,6 +5336,7 @@ figure.photostack-current::after {
 .z-newservice{
     margin: 0 auto;
     text-align: center;
+    color: #fff;
 }
 .z-back{
     color: #fff;

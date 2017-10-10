@@ -12,18 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title, class: "z-service" %><br>
     <%= f.text_field :title %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description, class: "z-service" %><br>
     <%= f.cktext_area :description %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :image %><br>
+    <%= f.label :image, class: "z-service" %><br>
     <%= f.file_field :image %>
   </div>
+  <br>
   <div class="actions z-newservice">
-    <%= f.submit %>
+    <%= f.submit style: "color: #fff;" %>
   </div>
 <% end %>
