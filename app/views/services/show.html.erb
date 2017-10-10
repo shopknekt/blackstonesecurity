@@ -24,7 +24,7 @@
         </ul>
         <div class="dt-sc-tabs-frame-content" style="display: block;">
             <div>
-            	<%= image_tag @service.image.url, style: "margin: 0 auto; display: block" %>
+            	<%= image_tag @service.image.url(:medium), style: "margin: 0 auto; display: block" %>
                 <p>
                     <%= @service.description %>
                 </p>
