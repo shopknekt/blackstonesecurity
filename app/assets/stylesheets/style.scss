@@ -1879,9 +1879,16 @@ ul.shop-times li:hover::after {
     font-weight: 300;
 }
 .dt-sc-service figure.gallery-thumb {
-    width: 100%;
+    width: 200px;
+    height: 200px;
     padding: 15px 0 5px;
 }
+
+.dt-sc-service figure.gallery-thumb img {
+    height: 100%;
+
+}
+
 .dt-sc-service figure {
     display: block;
     left: 0;

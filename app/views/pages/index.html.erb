@@ -166,12 +166,16 @@
                   <% end %>
                </figure>
                <div class="gallery-details">
-                  <p><%= service.short_description%></p>
+                  <p><%= service.short_description %></p>
+                  <%= link_to "Read More", service_path(service), style: 'color: #3dfbfa' %>
                </div>
             </div>
          </div>
          <% end %>
       </div>
+      <% if user_signed_in? %>
+            <%= link_to 'New Service', new_service_path, class: "z-back pull-right" %>
+            <% end %>
    </div>
    <div class="clear"></div>
    <div class="fullwidth-section dt-sc-parallax-section dt-sc-client-testimonial">
@@ -213,12 +217,12 @@
                </li>
                <% end %>
             </ul>
-            <% if user_signed_in? %>
-            <%= link_to 'New Testimonial', new_testimonial_path, class: "z-back pull-right" %>
-            <% end %>
          </div>
          <div class="hr-invisible"></div>
       </div>
+      <% if user_signed_in? %>
+            <%= link_to 'New Testimonial', new_testimonial_path, class: "z-back pull-right" %>
+            <% end %>
    </div>
 </div>
 <div class="clear"></div>
