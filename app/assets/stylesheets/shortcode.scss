@@ -571,4 +571,4 @@
 	.dt-sc-pr-tb-col:hover, .dt-sc-pr-tb-col.selected { transform: scale(1.05); -webkit-transform: scale(1.05); }
 	.dt-sc-pr-tb-col.type2:hover, .dt-sc-pr-tb-col.type2.selected { transform: scaleY(1.05); -webkit-transform: scaleY(1.05); }
 	.dt-sc-pr-tb-col.type2 .dt-sc-tb-content li { line-height: 24px; }
-	.dt-sc-pr-tb-col.type2 .dt-sc-tb-content li:last-child() { padding-bottom: 0; }
+	.dt-sc-pr-tb-col.type2 .dt-sc-tb-content li:last-child { padding-bottom: 0; }
