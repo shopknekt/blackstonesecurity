@@ -18,7 +18,7 @@
         <div class="clear"></div>
         <ul class="dt-sc-tabs-frame">
             <% @services.each do |service| %>   
-            <li><%= link_to service_path(service), class: "dt-sc-animation-eff1 current" do %> <%= service.title %> <% end %>
+            <li><%= link_to service_path(service), class: "dt-sc-animation-eff1 current nav-link" do %> <%= service.title %> <% end %>
             </li>
             <% end %>
         </ul>

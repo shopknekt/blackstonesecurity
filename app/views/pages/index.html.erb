@@ -97,6 +97,37 @@
    </div>
    <div class="claer"></div>
    <div class="hr-invisible"></div>
+   
+
+   <div class="fullwidth-section dt-service-hme">
+      <div class="container">
+         <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
+            Our Services
+         </h2>
+
+         <% Service.all.each do |service|%>
+         <div class="column dt-sc-one-third first animate" data-delay="100" data-animation="animated fadeIn">
+            <div class="dt-sc-service type1">
+               <h3 style="color: #665dde;"><%= service.title%></h3>
+               <figure class="gallery-thumb">
+                  <%= link_to service_path(service)  do%>
+                  <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape first-img"%>
+                  <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape second-img"%>
+                  <% end %>
+               </figure>
+               <div class="gallery-details">
+                  <p><%= service.short_description %></p>
+                  <%= link_to "Read More", service_path(service), style: 'color: #3dfbfa' %>
+               </div>
+            </div>
+         </div>
+         <% end %>
+      </div>
+      <% if user_signed_in? %>
+            <%= link_to 'New Service', new_service_path, class: "z-back pull-right" %>
+            <% end %>
+   </div>
+   <div class="clear"></div>
    <div class="fullwidth-section dt-sc-parallax-section dt-sc-counters">
       <div class="fullwidth-bg">
          <div class="container">
@@ -145,37 +176,6 @@
             <div class="hr-invisible"></div>
          </div>
       </div>
-   </div>
-   <div class="clear"></div>
-   <div class="hr-invisible"></div>
-
-   <div class="fullwidth-section dt-service-hme">
-      <div class="container">
-         <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
-            Our Services
-         </h2>
-
-         <% Service.all.each do |service|%>
-         <div class="column dt-sc-one-third first animate" data-delay="100" data-animation="animated fadeIn">
-            <div class="dt-sc-service type1">
-               <h3 style="color: #665dde;"><%= service.title%></h3>
-               <figure class="gallery-thumb">
-                  <%= link_to service_path(service)  do%>
-                  <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape first-img"%>
-                  <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape second-img"%>
-                  <% end %>
-               </figure>
-               <div class="gallery-details">
-                  <p><%= service.short_description %></p>
-                  <%= link_to "Read More", service_path(service), style: 'color: #3dfbfa' %>
-               </div>
-            </div>
-         </div>
-         <% end %>
-      </div>
-      <% if user_signed_in? %>
-            <%= link_to 'New Service', new_service_path, class: "z-back pull-right" %>
-            <% end %>
    </div>
    <div class="clear"></div>
    <div class="fullwidth-section dt-sc-parallax-section dt-sc-client-testimonial">
