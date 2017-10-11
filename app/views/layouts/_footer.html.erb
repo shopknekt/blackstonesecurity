@@ -25,10 +25,9 @@
                <h3 class="widgettitle">Our Best Service</h3>
                <div class="textwidget">
                   <ul>
-                     <li><a href="#"></a></li>
-                     <li><a href="#">Security Services</a></li>
-                     <li><a href="#">Facilities Services</a></li>
-                     <li><a href="#">Reception Services</a></li>
+                     <% Service.all.each do |service|%>
+                        <li><%= link_to "#{service.title}", service_path(service) %></li>
+                     <% end %>
                   </ul>
                </div>
             </aside>
@@ -38,8 +37,8 @@
                <h3 class="widgettitle">Pages</h3>
                <div class="textwidget">
                   <ul>
-                     <li><a href="#">About Us</a></li>
-                     <li><a href="#">Contact Us</a></li>
+                     <li><%= link_to "About Us",abouts_path %></li>
+                     <li><%= link_to "Contact Us",contacts_path %></li>
                   </ul>
                </div>
             </aside>
@@ -59,7 +58,7 @@
       <div class="copyright-content">
          <p>
             © 2015 Blackstone Security. All Rights Reserved by 
-            <a title="" href="http://blackstonesecurity.in/">www.blackstonesecurity.in</a>
+            <a title="" href="http://blackstonesecurity.in/">www.blackstonesecurity.in</a> | <%= link_to 'Login', new_user_session_path %>
          </p>
       </div>
       <div class="hr-invisible-small"></div>

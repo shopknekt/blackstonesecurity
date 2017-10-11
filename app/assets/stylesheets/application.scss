@@ -19,3 +19,22 @@
 @import "bootstrap";
 @import "toastr";
 @import "responsive";
+
+
+.z-service{
+	 color: #fff; 
+	 font-size: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="range"], input[type="date"], textarea, input.text, input[type="search"] {
+    background: #353737;
+    color: #fff;
+    padding: 12px;
+    display: block;
+    font-size: 13px;
+    margin: 0px 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 41px;
+}

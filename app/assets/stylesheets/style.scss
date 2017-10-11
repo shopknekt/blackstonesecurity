@@ -90,6 +90,7 @@ h3.border-title {
     font-size: 18px;
     margin-bottom: 50px;
     clear: both;
+    color: #fff;
 }
 h3.border-title.none:after,
 h3.border-title.none:before {
@@ -388,7 +389,6 @@ code {
     padding: 400px 0;
 }
 .fullwidth-section.dt-service-hme {
-    background-image: url(txt-bg.png);
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -995,18 +995,38 @@ a.dt-menu-expand {
     float: left;
     display: inline;
     padding: 0px;
-    margin: 15px 0 0;
     text-align: center;
+}
+
+#logo h2 {
+    margin-top: 5px;
+    font-family: 'Nova Flat', cursive;
+    letter-spacing: 2px;
+    font-size: 30px;
 }
 #logo a {
     width: 100%;
     display: block;
+}
+
+#logo a:hover {
+    text-decoration: none;
+    color: #00fafa;
 }
 #logo a img {
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
     width: 80px;
 }
+
+.alter_color {
+    color: #fff;
+}
+
+#logo span {
+    font-size: 30px;
+}
+
 #header .container {
     backface-visibility: hidden;
 }
@@ -1839,51 +1859,7 @@ ul.shop-times li:hover::after {
 }
 /*----*****---- << Parallax >> ----*****----*/
 
-.dt-sc-counters {
-    background-image: url(c.jpg);
-}
-.dt-sc-client-testimonial {
-    background-image: url(c.jpg);
-}
-.dt-sc-client-testimonial1 {
-    background-image: url(c.jpg);
-}
-.hexagon-in2.founder-image.img1 {
-    background-image: url(c.jpg);
-}
-.hexagon-in2.founder-image.img2 {
-    background-image: url(c.jpg);
-}
-.hexagon-in2.founder-image.img3 {
-    background-image: url(c.jpg);
-}
-.hexagon-in2.founder-image.img4 {
-    background-image: url(c.jpg);
-}
-.dt-sc-appointment-parallax {
-    background-image: url(c.jpg);
-}
-.dt-sc-work-parallax {
-    background-image: url(a.jpg);
-    background-repeat: none;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.dt-parallax.part-one {
-    background-image: url(c.jpg);
-}
-.dt-parallax.part-two {
-    background-image: url(c.jpg);
-}
-.dt-parallax.part-three {
-    background-image: url(c.jpg);
-}
-.dt-parallax.part-four {
-    background-image: url(c.jpg);
-}
-.dt-sc-ads-parallax {
-    background-image: url(c.jpg);
-}
+
 /*----*****---- << 03. Services >> ----*****----*/
 
 .dt-sc-service {
@@ -1903,9 +1879,16 @@ ul.shop-times li:hover::after {
     font-weight: 300;
 }
 .dt-sc-service figure.gallery-thumb {
-    width: 100%;
+    width: 200px;
+    height: 200px;
     padding: 15px 0 5px;
 }
+
+.dt-sc-service figure.gallery-thumb img {
+    height: 100%;
+
+}
+
 .dt-sc-service figure {
     display: block;
     left: 0;
@@ -3026,7 +3009,6 @@ ul.commentlist li ul.children {
     background-color: #52595a;
     padding: 130px 0 0;
     position: relative;
-    background-image: url(ico-bg.png);
 }
 .fullwidth-section.dt-sc-center:after {
     border-bottom: 52px solid #52595a;
@@ -5313,9 +5295,9 @@ figure.photostack-current::after {
 }
 /* *** Animate *** */
 
-.animate {
-    opacity: 0;
-}
+// .animate {
+//     opacity: 0;
+// }
 .animated {
     opacity: 1 !important;
 }
@@ -5326,6 +5308,7 @@ figure.photostack-current::after {
 }
 .z-center {
     text-align: center;
+    color: #fff;
 }
 .z-action {
     margin: 0 auto;
@@ -5334,9 +5317,14 @@ figure.photostack-current::after {
 .z-newservice{
     margin: 0 auto;
     text-align: center;
+    color: #fff;
 }
 .z-back{
     color: #fff;
     background-color: #665dde;
     padding: 20px;
+}
+
+.current {
+    background: #3dfaf9;
 }

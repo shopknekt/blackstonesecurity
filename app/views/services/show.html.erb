@@ -18,7 +18,7 @@
         <div class="clear"></div>
         <ul class="dt-sc-tabs-frame">
             <% @services.each do |service| %>   
-            <li><%= link_to service_path(service), class: "dt-sc-animation-eff1 current" do %> <%= service.title %> <% end %>
+            <li><%= link_to service_path(service), class: "dt-sc-animation-eff1 current nav-link" do %> <%= service.title %> <% end %>
             </li>
             <% end %>
         </ul>
@@ -26,7 +26,7 @@
             <div>
             	<%= image_tag @service.image.url, style: "margin: 0 auto; display: block" %>
                 <p>
-                    <%= @service.description %>
+                    <%= raw @service.description %>
                 </p>
                 <% if user_signed_in? %>
                 <%= link_to "Edit", edit_service_path(@service), class: "btn btn-success z-btn" %>
@@ -40,9 +40,9 @@
                     <div class="icon">
                         <img src="<%= asset_url('1.jpg') %>" alt="" title="" /> 
                     </div>
-                    <h3>
+                    <h5>
                         <a target="_blank" href="#"> Retail Business Premises </a>
-                    </h3>
+                    </h5>
                 </div>    
             </div>
             <div class="column dt-sc-one-third">
@@ -50,9 +50,9 @@
                     <div class="icon">   
                         <img src="<%= asset_url('2.jpg') %>" alt="" title="" />                
                     </div>
-                    <h3>
+                    <h5>
                         <a target="_blank" href="#"> Hotels </a>
-                    </h3>
+                    </h5>
                 </div>
             </div>
             <div class="column dt-sc-one-third">
@@ -60,9 +60,9 @@
                     <div class="icon">    
                         <img src="<%= asset_url('3.jpg') %>" alt="" title="" />
                     </div>
-                    <h3>
+                    <h5>
                         <a target="_blank" href="#"> Schools/Educational Institutions </a>
-                    </h3>                           
+                    </h5>
                 </div>
             </div>
             <div class="hr-invisible-medium"></div>
@@ -71,9 +71,9 @@
                     <div class="icon">
                         <img src="<%= asset_url('4.jpg') %>" alt="" title="" /> 
                     </div>
-                    <h3>
+                    <h5>
                         <a target="_blank" href="#"> Apartments </a>
-                    </h3>
+                    </h5>
                 </div>    
             </div>
             <div class="column dt-sc-one-third">
@@ -81,9 +81,9 @@
                     <div class="icon">   
                         <img src="<%= asset_url('5.jpg') %>" alt="" title="" />                
                     </div>
-                    <h3>
+                    <h5>
                         <a target="_blank" href="#"> Residences  </a>
-                    </h3>
+                    </h5>
                 </div>
             </div>
             <div class="column dt-sc-one-third">
@@ -91,9 +91,9 @@
                     <div class="icon">    
                         <img src="<%= asset_url('6.jpg') %>" alt="" title="" />
                     </div>
-                    <h3>
+                    <h5>
                         <a target="_blank" href="#"> Construction Sites </a>
-                    </h3>                           
+                    </h5>                           
                 </div>
             </div>
             <div class="hr-invisible-medium"></div>
@@ -102,9 +102,9 @@
                     <div class="icon">
                         <img src="<%= asset_url('7.jpg') %>" alt="" title="" /> 
                     </div>
-                    <h3>
+                    <h5>
                         <a target="_blank" href="#"> Factories/Industries </a>
-                    </h3>
+                    </h5>
                 </div>    
             </div>
             <div class="column dt-sc-one-third">
@@ -112,9 +112,9 @@
                     <div class="icon">   
                         <img src="<%= asset_url('8.jpg') %>" alt="" title="" />
                     </div>
-                    <h3>
+                    <h5>
                         <a target="_blank" href="#"> Hospitals </a>
-                    </h3>
+                    </h5>
                 </div>
             </div>
             <div class="column dt-sc-one-third">
@@ -122,9 +122,9 @@
                     <div class="icon">    
                         <img src="<%= asset_url('9.jpg') %>" alt="" title="" />
                     </div>
-                    <h3>
+                    <h5>
                         <a target="_blank" href="#"> Shopping Malls </a>
-                    </h3>
+                    </h5>
                 </div>
             </div>
             <div class="hr-invisible-medium"></div>

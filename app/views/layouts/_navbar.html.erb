@@ -1,13 +1,15 @@
 <header id="header" class="type1">
- <div class="container">
+ <div class="container-fluid">
   <div class="main-menu-container">
    <div class="main-menu">
     <div id="logo">
-     <a title="NeoCut" href="index.html">
-       <%= image_tag("logo.png", alt: "blackstone security logo") %>
-     </a>
+      <h2>
+        <%= link_to root_path do%>
+          <%= image_tag("logo.png", alt: "blackstone security logo") %><span><span class="alter_color">BLACKSTONE</span>SECURITY</span>
+        <% end %>
+      </h2>
    </div>
-   <div class="dt-sc-header-shape"><a class="dt-sc-button medium alignright" href="appointment.html">Phone:- +91 8951411747</a><span class="hexagon"> <span class="corner1"></span><span class="corner2"></span></span></div>
+   <div class="dt-sc-header-shape"><a class="dt-sc-button medium alignright" href="#">Phone:- +91 8951411747</a><span class="hexagon"> <span class="corner1"></span><span class="corner2"></span></span></div>
    <div id="primary-menu">
      <div class="dt-menu-toggle" id="dt-menu-toggle">Menu<span class="dt-menu-toggle-icon"></span></div>
      <nav id="main-menu">
@@ -33,10 +35,6 @@
     </li>
     <li class="menu-item-simple-parent">
      <%= link_to 'Logout', destroy_user_session_path, :method => :delete  %>
-   </li>
-   <% else %>
-   <li class="menu-item-simple-parent">
-     <%= link_to 'Login', new_user_session_path %>
    </li>
    <% end %>
  </ul>

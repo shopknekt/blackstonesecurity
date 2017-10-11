@@ -13,7 +13,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @testimonial.image %>
+  <%= image_tag @testimonial.image.url %>
 </p>
 
 <p>
@@ -25,5 +25,5 @@
 <br/>
 <%= link_to 'Edit', edit_testimonial_path(@testimonial), class: "z-back" %> 
 
-<%= link_to 'Back', testimonials_path, class: "z-back" %>
+<%= link_to 'Back', root_path, class: "z-back" %>
 </div>

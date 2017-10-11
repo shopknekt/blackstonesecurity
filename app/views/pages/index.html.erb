@@ -132,6 +132,37 @@
    </div>
    <div class="claer"></div>
    <div class="hr-invisible"></div>
+   
+
+   <div class="fullwidth-section dt-service-hme">
+      <div class="container">
+         <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
+            Our Services
+         </h2>
+
+         <% Service.all.each do |service|%>
+         <div class="column dt-sc-one-third first animate" data-delay="100" data-animation="animated fadeIn">
+            <div class="dt-sc-service type1">
+               <h4 style="color: #3cf5f3;"><%= service.title%></h4>
+               <figure class="gallery-thumb">
+                  <%= link_to service_path(service)  do%>
+                  <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape first-img"%>
+                  <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape second-img"%>
+                  <% end %>
+               </figure>
+               <div class="gallery-details">
+                  <p><%= service.short_description %></p>
+                  <%= link_to "Read More", service_path(service), style: 'color: #3dfbfa' %>
+               </div>
+            </div>
+         </div>
+         <% end %>
+      </div>
+      <% if user_signed_in? %>
+            <%= link_to 'New Service', new_service_path, class: "z-back pull-right" %>
+            <% end %>
+   </div>
+   <div class="clear"></div>
    <div class="fullwidth-section dt-sc-parallax-section dt-sc-counters">
       <div class="fullwidth-bg">
          <div class="container">
@@ -182,33 +213,6 @@
       </div>
    </div>
    <div class="clear"></div>
-   <div class="hr-invisible"></div>
-
-   <div class="fullwidth-section dt-service-hme">
-      <div class="container">
-         <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
-            Our Services
-         </h2>
-
-         <% Service.all.each do |service|%>
-         <div class="column dt-sc-one-third first animate" data-delay="100" data-animation="animated fadeIn">
-            <div class="dt-sc-service type1">
-               <h3><%= service.title%></h3>
-               <figure class="gallery-thumb">
-                  <%= link_to service_path(service)  do%>
-                  <%= image_tag service.image.url, alt: "", class: "attachment-gallery-with-shape first-img"%>
-                  <%= image_tag service.image.url, alt: "", class: "attachment-gallery-with-shape second-img"%>
-                  <% end %>
-               </figure>
-               <div class="gallery-details">
-                  <p><%= service.description%></p>
-               </div>
-            </div>
-         </div>
-         <% end %>
-      </div>
-   </div>
-   <div class="clear"></div>
    <div class="fullwidth-section dt-sc-parallax-section dt-sc-client-testimonial">
       <div class="fullwidth-bg">
          <div class="container">
@@ -248,12 +252,12 @@
                </li>
                <% end %>
             </ul>
-            <% if user_signed_in? %>
-            <%= link_to 'New Testimonial', new_testimonial_path, class: "z-back pull-right" %>
-            <% end %>
          </div>
          <div class="hr-invisible"></div>
       </div>
+      <% if user_signed_in? %>
+            <%= link_to 'New Testimonial', new_testimonial_path, class: "z-back pull-right" %>
+            <% end %>
    </div>
 </div>
 <div class="clear"></div>

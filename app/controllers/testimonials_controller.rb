@@ -1,5 +1,5 @@
 class TestimonialsController < ApplicationController
-   before_action :authenticate_user!, only:[:edit, :update, :destroy]
+   before_action :authenticate_user!, only:[:new,:edit, :update, :destroy]
   before_action :set_testimonial, only: [:show, :edit, :update, :destroy]
 
   # GET /testimonials
@@ -29,7 +29,7 @@ class TestimonialsController < ApplicationController
 
     respond_to do |format|
       if @testimonial.save
-        format.html { redirect_to @testimonial, notice: 'Testimonial was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Testimonial was successfully created.' }
         format.json { render :show, status: :created, location: @testimonial }
       else
         format.html { render :new }
@@ -57,7 +57,7 @@ class TestimonialsController < ApplicationController
   def destroy
     @testimonial.destroy
     respond_to do |format|
-      format.html { redirect_to testimonials_url, notice: 'Testimonial was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Testimonial was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
