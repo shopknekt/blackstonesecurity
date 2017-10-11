@@ -50,7 +50,7 @@
    <div class="hr-invisible"></div>
 
    <div class="container">
-      <% @abouts.where(title: :OurMission).each do |about| %>
+   <% @abouts.where(title: :OurMission).each do |about| %>
       <div class="row">
          <h3 class="border-title">
                 <%= about.title %>
@@ -58,7 +58,7 @@
         <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
             <div class="dt-sc-toggle-frame-set">
                 <div class="dt-sc-frame">
-                    <div class="dt-sc-content">
+                    <div class="dt-sc-content" style="text-align: justify;">
                         <p>
                             <%= about.description %>
                         </p>
@@ -77,13 +77,51 @@
             <div class="dt-sc-toggle-frame-set">
                 <div class="dt-sc-frame">
                     <div class="dt-sc-content">
-                        <img src="https://cdn.lynda.com/course/410329/410329-636167162756711825-16x9.jpg" class="img-responsive">
+                        <%= image_tag about.image.url, alt: "", class: "img-responsive"%>
                     </div>
                 </div>
             </div>
         </div>
      </div>
-        <% end %>
+   <% end %>
+
+   <% @abouts.where(title: :BusinessPrinciples).each do |about| %>
+      <div class="row">
+         <h3 class="border-title">
+                <%= about.title %>
+            </h3> 
+        <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
+            <div class="dt-sc-toggle-frame-set">
+                <div class="dt-sc-frame">
+                    <div class="dt-sc-content">
+                        <%= image_tag about.image.url, alt: "", class: "img-responsive"%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
+            <div class="dt-sc-toggle-frame-set">
+                <div class="dt-sc-frame">
+                    <div class="dt-sc-content" style="text-align: justify;">
+                        <p>
+                            <%= about.description %>
+                        </p>
+                        <br/>
+                        <br/>
+                        <% if user_signed_in? %>
+                        <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
+                        <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <% end %>
+  </div>
+  <div class="clear"></div>
+   <div class="hr-invisible"></div>
+   <div class="container">
       <div class="column dt-sc-one-third first animate" data-delay="100" data-animation="animated fadeIn">
          <div class="dt-sc-ico-content type1">
             <div class="icon">
