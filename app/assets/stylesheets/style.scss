@@ -5318,7 +5318,9 @@ figure.photostack-current::after {
     margin: 0 auto;
     text-align: center;
     color: #fff;
+    margin-top: 120px;
 }
+
 .z-back{
     color: #fff;
     background-color: #665dde;
@@ -5328,15 +5330,20 @@ figure.photostack-current::after {
 .current {
     background: #3dfaf9;
 }
-
-
-
-
 #z-homeslider {
   overflow: hidden;
   max-height: 658px;
   position: relative;
   background: #0b0602;
+}
+@media only screen and (min-width: 400px) and (max-width: 800px) {
+#z-homeslider {
+    overflow: hidden;
+    max-height: 658px;
+    position: relative;
+    background: #0b0602;
+    top: 300px;
+}
 }
 #z-homeslider:hover {
   cursor: -moz-grab;
@@ -5589,4 +5596,12 @@ figure.photostack-current::after {
   .z-homeslider-section-s .z-homeslider-Wrapper  > a {
     margin-top: 100px;
   }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 800px) {
+.z-about{
+    bottom: -300px;
+}
+
+
 }
