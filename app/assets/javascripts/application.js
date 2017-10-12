@@ -24,5 +24,7 @@
 //= require layerslider
 //= require jsplugins
 //= require custom 
+//= require easing 
+//= require scrolling-nav 
 
 

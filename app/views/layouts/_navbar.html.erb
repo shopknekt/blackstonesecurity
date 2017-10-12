@@ -5,29 +5,29 @@
     <div id="logo">
       <h2>
         <%= link_to root_path do%>
-          <%= image_tag("logo.png", alt: "blackstone security logo") %><span><span class="alter_color">BLACKSTONE</span>SECURITY</span>
+        <%= image_tag("logo.png", alt: "blackstone security logo") %><span><span class="alter_color">BLACKSTONE</span>SECURITY</span>
         <% end %>
       </h2>
-   </div>
-   <div class="dt-sc-header-shape"><a class="dt-sc-button medium alignright" href="#">Phone:- +91 8951411747</a><span class="hexagon"> <span class="corner1"></span><span class="corner2"></span></span></div>
-   <div id="primary-menu">
+    </div>
+    <div class="dt-sc-header-shape"><a class="dt-sc-button medium alignright" href="#">Phone:- +91 8951411747</a><span class="hexagon"> <span class="corner1"></span><span class="corner2"></span></span></div>
+    <div id="primary-menu">
      <div class="dt-menu-toggle" id="dt-menu-toggle">Menu<span class="dt-menu-toggle-icon"></span></div>
      <nav id="main-menu">
-      <ul class="menu">
+      <ul class="menu smooth-scroll ">
        <li class="current_page_item menu-item-simple-parent">
         <%= link_to root_path do %>Home<% end %>
       </li>
+      <li class="menu-item-simple-parent">
+      <%= link_to "About Us", "#about", class: "js-scroll-trigger" %>
+    </li>
       <li class="dropdown menu-item-simple-parent">
-       <%= link_to root_path do%>Services<% end %>
-        <ul class="sub-menu">
-        <% Service.all.each do |service|%>
-         <li><%= link_to "#{service.title}", service_path(service) %></li>
-        <% end %>
-       </ul>
-       <a class="dt-menu-expand">+</a>
+       <%= link_to "#services", class: "js-scroll-trigger" do%>Services<% end %>
      </li>
      <li class="menu-item-simple-parent">
-      <%= link_to "About Us",abouts_path %>
+      <%= link_to "Clients", "#testimonials", class: "js-scroll-trigger" %>
+    </li>
+    <li class="menu-item-simple-parent">
+      <%= link_to "Contact Us", "#contact", class: "js-scroll-trigger" %>
     </li>
     <% if  user_signed_in? %>
     <li class="menu-item-simple-parent">
