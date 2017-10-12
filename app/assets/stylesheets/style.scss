@@ -5577,8 +5577,15 @@ figure.photostack-current::after {
   .z-homeslider-section-s .z-homeslider-Wrapper  > a {
     margin-top: 0;
   }
+  
 }
 
+
+@media (max-width: 720px) {
+#header {
+    position: relative!important;
+  }
+}
 @media (min-width: 601px) and (max-width: 767px) {
   .z-homeslider-section-s .z-homeslider-Wrapper  > a {
     margin-top: 10px;
