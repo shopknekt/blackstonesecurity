@@ -19,7 +19,7 @@ gem 'devise'
 gem 'ckeditor'
  gem 'toastr-rails'
 # gem 'unicorn'
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails'
 
 group :development, :test do
   gem 'byebug'
