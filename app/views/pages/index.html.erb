@@ -54,8 +54,13 @@
                         <p>
                             <%= about.description %>
                         </p>
+                        <br>
+                        
+                      <%= link_to "Read More", abouts_path, style: 'color: #3dfbfa', class: "pull-right" %>
                         <br/>
                         <br/>
+                        <br>
+  
                         <% if user_signed_in? %>
                         <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
                         <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
@@ -76,7 +81,8 @@
         </div>
      </div>
    <% end %>
-
+<br>
+<br>
    <% @abouts.where(title: :BusinessPrinciples).each do |about| %>
       <div class="row">
          <h3 class="border-title">
@@ -98,8 +104,11 @@
                         <p>
                             <%= about.description %>
                         </p>
+                        <br>
+                        <%= link_to "Read More", abouts_path, style: 'color: #3dfbfa',class: "pull-right" %>
                         <br/>
                         <br/>
+                        <br>
                         <% if user_signed_in? %>
                         <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
                         <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
