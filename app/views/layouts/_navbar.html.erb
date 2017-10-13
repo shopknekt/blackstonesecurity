@@ -18,16 +18,16 @@
         <%= link_to root_path do %>Home<% end %>
       </li>
       <li class="menu-item-simple-parent">
-      <%= link_to "About Us", "#about", class: "js-scroll-trigger" %>
+          <%= link_to  "About Us", root_path(anchor: "about"), class: "js-scroll-trigger" %>
     </li>
       <li class="dropdown menu-item-simple-parent">
-       <%= link_to "#services", class: "js-scroll-trigger" do%>Services<% end %>
+       <%= link_to root_path(anchor: "services"), class: "js-scroll-trigger" do%>Services<% end %>
      </li>
      <li class="menu-item-simple-parent">
-      <%= link_to "Clients", "#testimonials", class: "js-scroll-trigger" %>
+      <%= link_to "Clients", root_path(anchor: "testimonials"), class: "js-scroll-trigger" %>
     </li>
     <li class="menu-item-simple-parent">
-      <%= link_to "Contact Us", "#contact", class: "js-scroll-trigger" %>
+      <%= link_to "Contact Us", root_path(anchor: "contact"), class: "js-scroll-trigger" %>
     </li>
     <% if  user_signed_in? %>
     <li class="menu-item-simple-parent">

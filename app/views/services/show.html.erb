@@ -1,33 +1,44 @@
 <div class="container">                     
     <div class="dt-sc-tabs-container animate animated fadeInLeft" data-delay="100" data-animation="animated fadeInLeft">
-        <br /><br /><br />
-        <h3 class="border-title">
-            Services
+        <h3 class="border-title" style="margin-top: 150px; font-size: 25px;">
+            SERVICES
         </h3>
-
-        <p>
-            BlackStone Security understands the market and we have devised a range of adaptable services to meet ever-changing demands. These include:
-        </p>
-        <% if user_signed_in? %>
-        <%= link_to "New Service", new_service_path(@service), class: "btn btn-success z-btn"%>
-        <% end %>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <div class="clear"></div>
-        <ul class="dt-sc-tabs-frame">
-            <% @services.each do |service| %>   
-            <li><%= link_to service_path(service), class: "dt-sc-animation-eff1 current nav-link" do %> <%= service.title %> <% end %>
-            </li>
+        <div class="col-md-9">
+            <p>
+                BlackStone Security understands the market and we have devised a range of adaptable services to meet ever-changing demands. These include:
+            </p>
+            <% if user_signed_in? %>
+            <%= link_to "New Service", new_service_path(@service), class: "btn btn-success z-btn"%>
             <% end %>
-        </ul>
+        </div>
+        <div class="col-md-3">
+            <div class="panel" style="background-color: rgb(10, 10, 10);">
+                <div class="panel-title panel-default">
+                    <h3 class="text-center" style="color: #fff;">Services</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="nav nav-stack">
+                        <% @services.each do |service| %>   
+                        <li><%= link_to service_path(service), class: "nav-link", style: "color: #00fafa;" do %> <%= service.title %> <% end %>
+                        </li>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <h3 class="border-title">
+            <%= @service.title %>
+        </h3>
         <div class="dt-sc-tabs-frame-content" style="display: block;">
-            <div>
+            <div class="col-md-6">
             	<%= image_tag @service.image.url, style: "margin: 0 auto; display: block" %>
+            </div>
+            <div class="col-md-6">
                 <p>
                     <%= raw @service.description %>
                 </p>
+                </div>
                 <% if user_signed_in? %>
                 <%= link_to "Edit", edit_service_path(@service), class: "btn btn-success z-btn" %>
                 <%= link_to "Delete", service_path(@service), class: "btn btn-danger z-btn", method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -35,6 +46,7 @@
             </div>
 
             <div class="hr-invisible-medium"></div>
+            <% if !Service.find_by(title: "Reception Services").present? %>
             <div class="column dt-sc-one-third first">
                 <div class="dt-sc-ico-content type3 animate" data-delay="100" data-animation="animated fadeIn">
                     <div class="icon">
@@ -43,12 +55,12 @@
                     <h5>
                         <a target="_blank" href="#"> Retail Business Premises </a>
                     </h5>
-                </div>    
+                </div>
             </div>
             <div class="column dt-sc-one-third">
                 <div class="dt-sc-ico-content type3 animate" data-delay="300" data-animation="animated fadeIn">
-                    <div class="icon">   
-                        <img src="<%= asset_url('2.jpg') %>" alt="" title="" />                
+                    <div class="icon">
+                        <img src="<%= asset_url('2.jpg') %>" alt="" title="" />
                     </div>
                     <h5>
                         <a target="_blank" href="#"> Hotels </a>
@@ -57,7 +69,7 @@
             </div>
             <div class="column dt-sc-one-third">
                 <div class="dt-sc-ico-content type3 animate" data-delay="500" data-animation="animated fadeIn">
-                    <div class="icon">    
+                    <div class="icon">
                         <img src="<%= asset_url('3.jpg') %>" alt="" title="" />
                     </div>
                     <h5>
@@ -128,7 +140,7 @@
                 </div>
             </div>
             <div class="hr-invisible-medium"></div>
-
+            <% end %>
         </div>
     </div>
 </div>
