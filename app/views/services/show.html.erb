@@ -1,7 +1,7 @@
 <div class="container">                     
     <div class="dt-sc-tabs-container animate animated fadeInLeft" data-delay="100" data-animation="animated fadeInLeft">
-        <h3 class="border-title" style="margin-top: 150px;">
-            Services
+        <h3 class="border-title" style="margin-top: 150px; font-size: 25px;">
+            SERVICES
         </h3>
         <div class="col-md-9">
             <p>
@@ -31,11 +31,14 @@
             <%= @service.title %>
         </h3>
         <div class="dt-sc-tabs-frame-content" style="display: block;">
-            <div>
+            <div class="col-md-6">
             	<%= image_tag @service.image.url, style: "margin: 0 auto; display: block" %>
+            </div>
+            <div class="col-md-6">
                 <p>
                     <%= raw @service.description %>
                 </p>
+                </div>
                 <% if user_signed_in? %>
                 <%= link_to "Edit", edit_service_path(@service), class: "btn btn-success z-btn" %>
                 <%= link_to "Delete", service_path(@service), class: "btn btn-danger z-btn", method: :delete, data: { confirm: 'Are you sure?' } %>
