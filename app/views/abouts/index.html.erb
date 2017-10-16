@@ -29,15 +29,17 @@
     <h2 class="border-title aligncenter">
       <%= about.title %>
     </h2>
-    <div class="column dt-sc-one-half first">
+<div class="col-md-6">
+    <%= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
+  </div>
+    <div class="col-md-6">
       <p>
        <%= raw about.description %>
      </p>
    </div>
-   <div class="column dt-sc-one-half">
-    <%= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
-  </div>
 </div>
+<br>
+<br>
 <div class="container">
   <% if user_signed_in? %>
   <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
@@ -80,7 +82,7 @@
       </div>
       <% end %>
       <div class="column dt-sc-one-half animate" data-delay="100" data-animation="animated fadeInRight">
-       <% @abouts.where(title: :BUSINESSPRINCIPLES).each do |about| %>
+       <% @abouts.where(title: :BusinessPrinciples).each do |about| %>
        <div class="dt-sc-tabs-container">
         <h3 class="border-title">
          <%= about.title %>
