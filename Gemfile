@@ -20,7 +20,7 @@ gem 'ckeditor'
  gem 'toastr-rails'
 # gem 'unicorn'
 gem 'capistrano-rails'
-
+gem 'seed_dump'
 group :development, :test do
   gem 'byebug'
 end
