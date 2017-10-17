@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+  
   	mount Ckeditor::Engine => '/ckeditor'
 	root 'pages#index'
 	# devise_for :users
@@ -13,13 +14,13 @@ Rails.application.routes.draw do
 
 
 	# namespace :admin do
-		
 	# end
 
 	resources :contacts
 	resources :testimonials
 	resources :services
 	resources :abouts
+	resources :seo_options
 
 
 

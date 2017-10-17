@@ -21,6 +21,8 @@ gem 'ckeditor'
 # gem 'unicorn'
 gem 'capistrano-rails'
 gem 'seed_dump'
+gem 'simple_form'
+
 group :development, :test do
   gem 'byebug'
 end
