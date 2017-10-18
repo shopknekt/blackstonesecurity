@@ -1,0 +1,72 @@
+<section>
+  <div class="box box-primary" style="margin-top: 120px;">
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="col-lg-12">
+         
+          <p>
+            <strong>Title:</strong>
+            <%= @seo_option.title %>
+          </p>
+
+          <p>
+            <strong>Description:</strong>
+            <%= @seo_option.description %>
+          </p>
+
+          <p>
+            <strong>Keywords:</strong>
+            <%= @seo_option.keywords %>
+          </p>
+
+          <p>
+            <strong>Twitter title:</strong>
+            <%= @seo_option.twitter_title %>
+          </p>
+
+          <p>
+            <strong>Twitter description:</strong>
+            <%= @seo_option.twitter_description %>
+          </p>
+
+          <p>
+            <strong>Twitter handle:</strong>
+            <%= @seo_option.twitter_handle %>
+          </p>
+
+          <p>
+            <strong>Facebook title:</strong>
+            <%= @seo_option.facebook_title %>
+          </p>
+
+          <p>
+            <strong>Facebook description:</strong>
+            <%= @seo_option.facebook_description %>
+          </p>
+
+          <p>
+            <!-- <strong>Twitter image:</strong> -->
+            <%#= image_tag @seo_option.twitter_image.url %>
+          </p>
+
+          <p>
+           <!--  <strong>Facebook image:</strong> -->
+            <%#= @seo_option.facebook_image %>
+          </p>
+          <div class="box-footer">
+            <div class="pull-right">
+              <%= link_to 'Back', seo_options_path, class: "btn btn-default" %>
+            </div>
+            <%= link_to 'Edit', edit_seo_option_path(@seo_option), class: "btn btn-default" %>
+          </div>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+</section>
