@@ -7,10 +7,10 @@
                   <p><b>Title:</b> <%= seo_option.title %></p>
                   <p><b>Description:</b> <%= seo_option.description %></p>
                   <p><b>Keywords:</b> <%= seo_option.keywords %></p>
-                  <p><b>Twitter Image:</b><br>
+                  <p><b>Twitter Title:</b><%= seo_option.twitter_title%><br>
                     <%#= image_tag seo_option.twitter_image, class: "img-responsive", style: "width: 40px;" %>
                   </p>
-                  <p><b>Facebook Image:</b><br>
+                  <p><b>Facebook Title:</b><%= seo_option.facebook_title%><br>
                     <%#= image_tag seo_option.og_image, class: "img-responsive", style: "width: 40px;" %>
                   </p>
                   <%= link_to edit_seo_option_path(seo_option), class: "btn btn-default btn-xs pull-right" do %>
@@ -24,6 +24,6 @@
         </div>
 <br>
 
-<%= link_to 'New Seo option', new_seo_option_path, class: "btn btn-default" %>
+<%#= link_to 'New Seo option', new_seo_option_path, class: "btn btn-default" %>
 
 </section>
