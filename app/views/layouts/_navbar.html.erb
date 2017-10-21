@@ -29,6 +29,9 @@
     <li class="menu-item-simple-parent">
       <%= link_to "Contact Us", root_path(anchor: "contact"), class: "js-scroll-trigger" %>
     </li>
+    <li class="menu-item-simple-parent">
+      <%= link_to  "Gallery", galleries_path, class: "js-scroll-trigger" %>
+    </li>
     <% if  user_signed_in? %>
     <li class="menu-item-simple-parent">
       <%= link_to "Leads", contacts_path %>

@@ -5617,3 +5617,19 @@ figure.photostack-current::after {
 .seooption{
     color: #fff!important;
 }
+
+
+
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+}
