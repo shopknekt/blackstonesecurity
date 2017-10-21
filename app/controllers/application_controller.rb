@@ -9,4 +9,13 @@ class ApplicationController < ActionController::Base
   	 @seo_option = SeoOption.first
   end
 
+
+  # def create
+  # 	if @user.save
+  #     params[:image].each do |gallery|      
+  #       @user.images.create(:image=> gallery)
+  #     format.html { redirect_to galleries_url, notice: 'Gallery was successfully created.' }
+  #     end
+  # end
+
 end

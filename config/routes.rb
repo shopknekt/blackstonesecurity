@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
 
   
+  resources :galleries
   	mount Ckeditor::Engine => '/ckeditor'
 	root 'pages#index'
 	# devise_for :users
@@ -24,7 +25,7 @@ Rails.application.routes.draw do
 
 
 
-	# get 'about', to: 'pages#about'
+	#get 'gallery', to: 'pages#gallery'
 	get 'contact', to: 'pages#contact'
 	get '404', to: 'pages#404'
 
