@@ -1,48 +1,55 @@
 <footer id="footer">
    <div class="footer-widgets-wrapper">
-      <div class="container">
-         <div class="column dt-sc-one-third first">
+      <div class="container-fluid">
+         <div class="col-md-3">
             <aside class="widget widget_text">
-               <h3 class="widgettitle">Contact Us</h3>
+               <h3 class="widgettitle text-center">About Us</h3>
                <div class="textwidget">
-                  <div class="dt-sc-contact-info">
-                     <div class="icon">
-                        <i class="fa fa-envelope"></i>
-                     </div>
-                     <p><a href="mailto:lms@gmail.com">admin@blackstonesecurity.in</a></p>
-                  </div>
-                  <div class="dt-sc-contact-info">
-                     <div class="icon">
-                        <i class="fa fa-phone"></i>
-                     </div>
-                     <p>+91 8951411747</p>
-                  </div>
+                  <p class="text-center" style="color: #aaa;">We are offering High-end Security Services to Business establishments, Apartments, Schools, Hotels and Hospitals. Contact us for Security Guards, Gunmen, and Facility services.</p>
                </div>
             </aside>
          </div>
-         <div class="column dt-sc-one-third">
+
+         <div class="col-md-3">
             <aside class="widget widget_text">
-               <h3 class="widgettitle">Our Best Service</h3>
+               <h3 class="widgettitle text-center">Pages</h3>
                <div class="textwidget">
-                  <ul>
-                     <% Service.all.each do |service|%>
-                        <li><%= link_to "#{service.title}", service_path(service) %></li>
-                     <% end %>
-                  </ul>
-               </div>
-            </aside>
-         </div>
-         <div class="column dt-sc-one-third">
-            <aside class="widget widget_text">
-               <h3 class="widgettitle">Pages</h3>
-               <div class="textwidget">
-                  <ul>
+                  <ul class="text-center">
                      <li><%= link_to "About Us",abouts_path %></li>
                      <li><%= link_to "Contact Us",contacts_path %></li>
                   </ul>
                </div>
             </aside>
          </div>
+         
+         <div class="col-md-3">
+            <aside class="widget widget_text">
+               <h3 class="widgettitle text-center">Our Services</h3>
+               <div class="textwidget">
+                  <ul>
+                     <% Service.all.each do |service|%>
+                        <li class="text-center"><%= link_to "#{service.title}", service_path(service) %></li>
+                     <% end %>
+                  </ul>
+               </div>
+            </aside>
+         </div>
+         
+
+         <div class="col-md-3">
+            <aside class="widget widget_text">
+               <h3 class="widgettitle text-center">Contact Us</h3>
+               <h4 class="text-center" style="color: #fff; line-height: 29px;">
+                  #955, 16th Main<br/>
+                  BTM 2nd Stage<br />
+                  Bangalore - 560076<br />
+                  <i class="fa fa-phone"></i> 080 2668 1440<br />
+                  <i class="fa fa-mobile"></i> +91 9898 090206<br />
+                  <i class="fa fa-envelope"></i> info@blackstonesecurity.in<br />
+               </h4>
+            </aside>
+         </div>
+          
       </div>
    </div>
    <div class="container">
@@ -58,7 +65,7 @@
       <div class="copyright-content">
          <p>
             © 2015 Blackstone Security. All Rights Reserved by 
-            <a title="" href="http://blackstonesecurity.in/">www.blackstonesecurity.in</a> | <%= link_to 'Login', new_user_session_path %>
+            <a title="" href="http://blackstonesecurity.in/">www.blackstonesecurity.in</a>
          </p>
       </div>
       <div class="hr-invisible-small"></div>
