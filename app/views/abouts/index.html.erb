@@ -29,13 +29,13 @@
     <h2 class="border-title aligncenter">
       <%= about.title %>
     </h2>
-<div class="col-md-6">
-    <%= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
-  </div>
-    <div class="col-md-6">
-      <p>
+<!-- <div class="col-md-6">
+    <%#= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
+  </div> -->
+    <div class="col-md-12">
+      <center>
        <%= raw about.description %>
-     </p>
+     </center>
    </div>
 </div>
 <br>
@@ -59,8 +59,8 @@
       <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
         Why People Choose Us?
       </h2>
-      <% @abouts.where(title: :OurMission).each do |about| %>
-      <div class="column dt-sc-one-half first animate" data-delay="100" data-animation="animated fadeInLeft">
+      <% @abouts.where(title: :WhyUs).each do |about| %>
+      <div class="col-md-12 first animate" data-delay="100" data-animation="animated fadeInLeft">
         <h3 class="border-title">
           <%= about.title %>
         </h3> 
@@ -81,27 +81,6 @@
         </div>
       </div>
       <% end %>
-      <div class="column dt-sc-one-half animate" data-delay="100" data-animation="animated fadeInRight">
-       <% @abouts.where(title: :BusinessPrinciples).each do |about| %>
-       <div class="dt-sc-tabs-container">
-        <h3 class="border-title">
-         <%= about.title %>
-       </h3>
-       <div class="clear"></div>
-       <div class="dt-sc-tabs-frame">
-        <p>
-         <%= raw about.description %>
-       </p>
-       <br/>
-       <br/>
-       <% if user_signed_in? %>
-       <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
-       <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
-       <% end %>
-     </div>
-   </div>
-   <% end %>
- </div>
 </div>
 <div class="hr-invisible"></div>
 <div class="clear"></div>
