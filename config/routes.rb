@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
 
   
+  resources :pictures
   resources :galleries
   	mount Ckeditor::Engine => '/ckeditor'
 	root 'pages#index'

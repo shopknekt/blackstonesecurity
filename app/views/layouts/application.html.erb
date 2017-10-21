@@ -4,10 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Blackstonesecurity</title>
+	<title>Blackstonesecurity</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<%= csrf_meta_tags %>
-	<%= stylesheet_link_tag    'application', media: 'all' %>
+	<%= stylesheet_link_tag 'application', media: 'all' %>
 
 	<meta description="<%= @seo_option.description %>" />
 	<meta title="<%= @seo_option.title %>" />
@@ -20,9 +20,9 @@
 
 
 
-    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
-	 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-	 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Dosis:500' rel='stylesheet' type='text/css'>
@@ -31,31 +31,31 @@
 	<link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
 </head>
 <body>
-<div class="wrapper">
-	<div class="inner-wrapper">
-		<%= render 'layouts/navbar' %>
-		<%= yield %>
-		<%= render 'layouts/footer' %>
+	<div class="wrapper">
+		<div class="inner-wrapper">
+			<%= render 'layouts/navbar' %>
+			<%= yield %>
+			<%= render 'layouts/footer' %>
+		</div>
+
 	</div>
-
-</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<%= javascript_include_tag 'application' %>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<%= javascript_include_tag 'application' %>
 
 
 
-<script data-cfasync="false" type="text/javascript">
-	var lsjQuery = jQuery;
-</script>
-<script data-cfasync="false" type="text/javascript">
-	lsjQuery(document).ready(function() {
-	if(typeof lsjQuery.fn.layerSlider == "undefined") { lsShowNotice('layerslider_30','jquery'); }
-	else {
-	lsjQuery("#layerslider_30").layerSlider({responsiveUnder: 1170, layersContainer: 1170, startInViewport: false, pauseOnHover: false, forceLoopNum: false, autoPlayVideos: false, skinsPath: 'http://wedesignthemes.com/themes/dummy-super/wp-content/plugins/LayerSlider/static/skins/'})
-	}
-	});
-</script>
-<%= render 'layouts/message'%>
+	<script data-cfasync="false" type="text/javascript">
+		var lsjQuery = jQuery;
+	</script>
+	<script data-cfasync="false" type="text/javascript">
+		lsjQuery(document).ready(function() {
+			if(typeof lsjQuery.fn.layerSlider == "undefined") { lsShowNotice('layerslider_30','jquery'); }
+			else {
+				lsjQuery("#layerslider_30").layerSlider({responsiveUnder: 1170, layersContainer: 1170, startInViewport: false, pauseOnHover: false, forceLoopNum: false, autoPlayVideos: false, skinsPath: 'http://wedesignthemes.com/themes/dummy-super/wp-content/plugins/LayerSlider/static/skins/'})
+			}
+		});
+	</script>
+	<%= render 'layouts/message'%>
 
 </body>
 </html>
