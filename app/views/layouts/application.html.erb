@@ -9,6 +9,7 @@
 	<%= csrf_meta_tags %>
 	<%= stylesheet_link_tag    'application', media: 'all' %>
 
+	<% unless @seo_option.nil? %>
 	<meta description="<%= @seo_option.description %>" />
 	<meta title="<%= @seo_option.title %>" />
 	<meta keywords="<%= @seo_option.keywords %>" />
@@ -17,8 +18,7 @@
 	<meta twitter_handle="<%= @seo_option.twitter_handle %>" />
 	<meta facebook_title="<%= @seo_option.facebook_title %>" />
 	<meta facebook_description="<%= @seo_option.facebook_description %>" />
-
-
+	<% end %>
 
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
