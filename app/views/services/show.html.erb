@@ -25,7 +25,7 @@
             </div>
 
             <div class="hr-invisible-medium"></div>
-            <% if !Service.find_by(title: "Security Services").present? %>
+            <% if @service.title == "Security Services" %>
             <div class="column dt-sc-one-third first">
                 <div class="dt-sc-ico-content type3 animate" data-delay="100" data-animation="animated fadeIn">
                     <div class="icon">
@@ -60,7 +60,7 @@
             <div class="column dt-sc-one-third first">
                 <div class="dt-sc-ico-content type3 animate" data-delay="100" data-animation="animated fadeIn">
                     <div class="icon">
-                        <img src="<%= asset_url('4.jpg') %>" alt="" title="" /> 
+                        <img src="<%= asset_url('2.jpg') %>" alt="" title="" /> 
                     </div>
                     <h5>
                         <a target="_blank" href="#"> Apartments </a>
