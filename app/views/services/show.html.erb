@@ -25,14 +25,14 @@
             </div>
 
             <div class="hr-invisible-medium"></div>
-            <% if !Service.find_by(title: "Security Services").present? %>
+            <% if @service.title == "Security Services" %>
             <div class="column dt-sc-one-third first">
                 <div class="dt-sc-ico-content type3 animate" data-delay="100" data-animation="animated fadeIn">
                     <div class="icon">
                         <img src="<%= asset_url('1.jpg') %>" alt="" title="" /> 
                     </div>
                     <h5>
-                        <a target="_blank" href="#"> Retail Business Premises </a>
+                        <%= link_to services_path do%> Retail Business Premises <% end %>
                     </h5>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                         <img src="<%= asset_url('2.jpg') %>" alt="" title="" />
                     </div>
                     <h5>
-                        <a target="_blank" href="#"> Hotels </a>
+                        <%= link_to services_path do%> Hotels <% end %>
                     </h5>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                         <img src="<%= asset_url('3.jpg') %>" alt="" title="" />
                     </div>
                     <h5>
-                        <a target="_blank" href="#"> Schools/Educational Institutions </a>
+                        <%= link_to services_path do%> Schools/Educational Institutions <% end %>
                     </h5>
                 </div>
             </div>
@@ -60,10 +60,10 @@
             <div class="column dt-sc-one-third first">
                 <div class="dt-sc-ico-content type3 animate" data-delay="100" data-animation="animated fadeIn">
                     <div class="icon">
-                        <img src="<%= asset_url('4.jpg') %>" alt="" title="" /> 
+                        <img src="<%= asset_url('2.jpg') %>" alt="" title="" /> 
                     </div>
                     <h5>
-                        <a target="_blank" href="#"> Apartments </a>
+                        <%= link_to services_path do%> Apartments <% end %>
                     </h5>
                 </div>    
             </div>
@@ -73,7 +73,7 @@
                         <img src="<%= asset_url('5.jpg') %>" alt="" title="" />                
                     </div>
                     <h5>
-                        <a target="_blank" href="#"> Residences  </a>
+                        <%= link_to services_path do%>Residences  <% end %>
                     </h5>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                         <img src="<%= asset_url('6.jpg') %>" alt="" title="" />
                     </div>
                     <h5>
-                        <a target="_blank" href="#"> Construction Sites </a>
+                        <%= link_to services_path do%> Construction Sites <% end %>
                     </h5>                           
                 </div>
             </div>
@@ -94,7 +94,7 @@
                         <img src="<%= asset_url('7.jpg') %>" alt="" title="" /> 
                     </div>
                     <h5>
-                        <a target="_blank" href="#"> Factories/Industries </a>
+                        <%= link_to services_path do%> Factories/Industries <% end %>
                     </h5>
                 </div>    
             </div>
@@ -104,7 +104,7 @@
                         <img src="<%= asset_url('8.jpg') %>" alt="" title="" />
                     </div>
                     <h5>
-                        <a target="_blank" href="#"> Hospitals </a>
+                        <%= link_to services_path do%> Hospitals <% end %>
                     </h5>
                 </div>
             </div>
@@ -114,7 +114,7 @@
                         <img src="<%= asset_url('9.jpg') %>" alt="" title="" />
                     </div>
                     <h5>
-                        <a target="_blank" href="#"> Shopping Malls </a>
+                        <%= link_to services_path do%> Shopping Malls <% end %>
                     </h5>
                 </div>
             </div>

@@ -1,26 +1,26 @@
 <div id="main">
-   <div id="z-homeslider" class="carousel z-homeslider-section-s"  data-pause="hover" data-interval="400" data-duration="500">
+ <div id="z-homeslider" class="carousel z-homeslider-section-s"  data-pause="hover" data-interval="400" data-duration="500">
 
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#z-homeslider" data-slide-to="0" class="active"></li>
-      <li data-target="#z-homeslider" data-slide-to="1"></li>
-      <li data-target="#z-homeslider" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="<%= asset_url("slider1.jpg")%>" />
-        <div class="z-homeslider-Wrapper">
-          <h2 class="animated zoomInLeft">Our Values</h2>
-          <h3 class="animated zoomInLeft">Vigilance. Integrity. Service Excellence.   <br /> One Team. Innovative. Nurturing.</h3>
-          <!-- <a href="#" class="animated zoomInLeft">read more</a> -->
-        </div>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#z-homeslider" data-slide-to="0" class="active"></li>
+    <li data-target="#z-homeslider" data-slide-to="1"></li>
+    <li data-target="#z-homeslider" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="<%= asset_url("slider1.jpg")%>" />
+      <div class="z-homeslider-Wrapper">
+        <h2 class="animated zoomInLeft">Our Values</h2>
+        <h3 class="animated zoomInLeft">Vigilance. Integrity. Service Excellence.   <br /> One Team. Innovative. Nurturing.</h3>
+        <!-- <a href="#" class="animated zoomInLeft">read more</a> -->
       </div>
-      <div class="item">
-        <img src="<%= asset_url("slider2.jpg")%>"  />
-        <div class="z-homeslider-Wrapper">
-          <h2 class="animated zoomInLeft">Followed</h2>
-          <h3 class="animated zoomInLeft">Utmost Ethical practices</<h3>
+    </div>
+    <div class="item">
+      <img src="<%= asset_url("slider2.jpg")%>"  />
+      <div class="z-homeslider-Wrapper">
+        <h2 class="animated zoomInLeft">Followed</h2>
+        <h3 class="animated zoomInLeft">Utmost Ethical practices</<h3>
           <!-- <a href="#" class="animated zoomInLeft">read more</a> -->
         </div>
       </div>
@@ -35,270 +35,341 @@
       </div>
     </div>
   </div>
-   <!-- **Slider Section - End** -->
-   <div class="clear"></div>
-   <div class="hr-invisible" id="about"></div>
-
-   <div class="container z-about">
-   <% @abouts.where(title: :OurMission).each do |about| %>
-      <div class="row" id="about">
-        <h3 class="border-title">
-          <%= about.title %>
-        </h3> 
-        <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
-            <div class="dt-sc-toggle-frame-set">
-                <div class="dt-sc-frame">
-                    <div class="dt-sc-content" style="text-align: justify;">
-                        <p>
-                            <%= about.description %>
-                        </p>
-                        <br>
-                        
-                      <%#= link_to "Read More", abouts_path, style: 'color: #3dfbfa', class: "pull-right" %>
-                        <br/>
-                        <br/>
-                        <br>
-  
-                        <% if user_signed_in? %>
-                        <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
-                        <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
-                        <% end %>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
-            <div class="dt-sc-toggle-frame-set">
-                <div class="dt-sc-frame">
-                    <div class="dt-sc-content">
-                        <%= image_tag about.image.url, alt: "", class: "img-responsive"%>
-                    </div>
-                </div>
-            </div>
-        </div>
-     </div>
-   <% end %>
-   <% @abouts.where(title: :BusinessPrinciples).each do |about| %>
-      <div class="row">
-         <h3 class="border-title">
-                <%= about.title %>
-            </h3> 
-        <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
-            <div class="dt-sc-toggle-frame-set">
-                <div class="dt-sc-frame">
-                    <div class="dt-sc-content">
-                        <%= image_tag about.image.url, alt: "", class: "img-responsive"%>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
-            <div class="dt-sc-toggle-frame-set">
-                <div class="dt-sc-frame">
-                    <div class="dt-sc-content" style="text-align: justify;">
-                        <p>
-                            <%= about.description %>
-                        </p>
-                        <%#= link_to "Read More", abouts_path, style: 'color: #3dfbfa',class: "pull-right" %>
-                        <% if user_signed_in? %>
-                        <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
-                        <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
-                        <% end %>
-                    </div>
-                </div>
-            </div>
-        </div>
-     </div>
-     <% end %>
-  </div>
+  <!-- **Slider Section - End** -->
   <div class="clear"></div>
-   <div class="hr-invisible"></div>
+  <div class="hr-invisible" id="about"></div>
 
-   <div class="fullwidth-section dt-sc-parallax-section dt-sc-counters">
-      <div class="fullwidth-bg">
-         <div class="container">
-            <div class="hr-invisible"></div>
-            <div class="hr-invisible-very-very-small"></div>
-            <div class="column dt-sc-one-fourth first animate" data-delay="100" data-animation="animated fadeIn">
-               <div class="dt-sc-counter">
-                  <div class="counter-effect"></div>
-                  <div class="dt-sc-counter-number">
-                     <p data-value="50">50</p>
-                     <span>+</span>
-                  </div>
-                  <h5> Projects </h5>
-               </div>
-            </div>
-            <div class="column dt-sc-one-fourth animate" data-delay="300" data-animation="animated fadeIn">
-               <div class="dt-sc-counter">
-                  <div class="counter-effect"></div>
-                  <div class="dt-sc-counter-number">
-                     <p data-value="95">95</p>
-                     <span>%</span>
-                  </div>
-                  <h5> Happy Customers </h5>
-               </div>
-            </div>
-            <div class="column dt-sc-one-fourth animate" data-delay="500" data-animation="animated fadeIn">
-               <div class="dt-sc-counter">
-                  <div class="counter-effect"></div>
-                  <div class="dt-sc-counter-number">
-                     <p data-value="90">90</p>
-                     <span>%</span>
-                  </div>
-                  <h5> Positive Feedbacks </h5>
-               </div>
-            </div>
-            <div class="column dt-sc-one-fourth animate" data-delay="700" data-animation="animated fadeIn">
-               <div class="dt-sc-counter">
-                  <div class="counter-effect"></div>
-                  <div class="dt-sc-counter-number">
-                     <p data-value="98">98</p>
-                     <span>%</span>
-                  </div>
-                  <h5> Repeat Clients </h5>
-               </div>
-            </div>
-            <div class="hr-invisible"></div>
-         </div>
+  <div class="container z-about">
+   <% @abouts.where(title: :OurMission).each do |about| %>
+   <div class="row" id="about">
+    <h3 class="border-title">
+      <%= about.title %>
+    </h3> 
+    <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
+      <div class="dt-sc-toggle-frame-set">
+        <div class="dt-sc-frame">
+          <div class="dt-sc-content" style="text-align: justify;">
+            <p>
+              <%= raw about.description %>
+            </p>
+            <br>
+            <%#= link_to "Read More", abouts_path, style: 'color: #3dfbfa', class: "pull-right" %>
+            <br/>
+            <br/>
+            <br>
+
+            <% if user_signed_in? %>
+            <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
+            <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
+            <% end %>
+          </div>
+        </div>
       </div>
-   </div>
-   <div class="clear"></div>
-   
-   <div class="hr-invisible"  id="services"></div>
-   
+    </div>
 
-   <div class="fullwidth-section dt-service-hme">
-      <div class="container">
-         <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
-            Our Services
-         </h2>
+    <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
+      <div class="dt-sc-toggle-frame-set">
+        <div class="dt-sc-frame">
+          <div class="dt-sc-content">
+            <%= image_tag about.image.url, alt: "", class: "img-responsive"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
 
-         <% Service.all.each do |service|%>
-         <div class="column dt-sc-one-third first animate" data-delay="100" data-animation="animated fadeIn">
-            <div class="dt-sc-service type1">
-               <h4 style="color: #3cf5f3;"><%= service.title%></h4>
-               <figure class="gallery-thumb">
-                  <%= link_to service_path(service)  do%>
-                  <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape first-img"%>
-                  <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape second-img"%>
+
+
+  <% @abouts.where(title: :BusinessPrinciples).each do |about| %>
+  <div class="row">
+   <h3 class="border-title z-business">
+    <%= about.title %>
+    <hr align="left" width="20%">
+  </h3>
+        <!-- <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
+            <div class="dt-sc-toggle-frame-set">
+                <div class="dt-sc-frame">
+                    <div class="dt-sc-content">
+                        <%#= image_tag about.image.url, alt: "", class: "img-responsive"%>
+                    </div>
+                </div>
+            </div>
+          </div> -->
+          <div class="col-md-12 animate" data-delay="100" data-animation="animated fadeInLeft">
+            <div class="dt-sc-toggle-frame-set">
+              <div class="dt-sc-frame">
+                <div class="dt-sc-content" style="text-align: center;">
+                  <p>
+                    <%= about.description %>
+                  </p>
+                  <%#= link_to "Read More", abouts_path, style: 'color: #3dfbfa',class: "pull-right" %>
+                  <% if user_signed_in? %>
+                  <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
+                  <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
                   <% end %>
-               </figure>
-               <div class="gallery-details">
-                  <p><%= service.short_description %></p>
-                  <%#= link_to "Read More", service_path(service), style: 'color: #3dfbfa' %>
-               </div>
+                </div>
+              </div>
             </div>
-         </div>
-         <% end %>
-      </div>
-      <% if user_signed_in? %>
-            <%= link_to 'New Service', new_service_path, class: "z-back pull-right" %>
-            <% end %>
-   </div>
-   <div class="clear"></div>
-  <div class="hr-invisible" id="testimonials"></div>
-   
-   <div class="fullwidth-section dt-sc-parallax-section dt-sc-client-testimonial">
-      <div class="fullwidth-bg">
-         <div class="container">
-            <div class="hr-invisible"></div>
-            <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
-              TESTIMONIALS
-           </h2>
-           <div class="dt-sc-testimonial-carousel-wrapper">
-            <ul class="dt-sc-testimonial-carousel">
-               <% Testimonial.all.each do |testominal|%>
-               <li>
-                  <div class="dt-sc-testimonial">
-                     <blockquote>
-                        <q>
-                           <%= testominal.description %>
-                        </q>
-                     </blockquote>
-                     <div class="author">
-                        <span class="hexagon2"></span> 
-                        <div class="hexagon-image">
-                           <div class="hexagon-in1">
-                              <div class="hexagon-in2 founder-image img1">
-                                 <%= image_tag testominal.image.url, alt: ""%>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="author-detail">
-                        <%= testominal.name %>  <span> <%= testominal.place %> </span>
-                        <% if user_signed_in? %>
-                        <%#= link_to "New", new_testimonial_path(testominal), class: "btn btn-success z-btn"%>
-                        <%= link_to "Edit", edit_testimonial_path(testominal), class: "btn btn-success z-btn" %>
-                        <%= link_to "Delete", testimonial_path(testominal), class: "btn btn-danger z-btn", method: :delete, data: { confirm: 'Are you sure?' } %>
-                        <% end %>
-                     </div>
+          </div>
+        </div>
+        <% end %>
+        <br><br>
+
+        <div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid vc_custom_1441997752752" style="position: relative; left: -200px; box-sizing: border-box; width: 1280px;"><div class="wpb_column vc_column_container vc_col-sm-12 vc_custom_1441997764134"><div class="wpb_wrapper">
+          <div class="wpb_widgetised_column wpb_content_element">
+            <div class="wpb_wrapper">
+              <div><div class="textwidget"><div class="wide-column">
+                <div class="cta-box">
+                  <div class="cta-top boxes balck-bg" style="height: 463px;">
+                    <div class="text-box">
+                      <h3 class="yellow-color">Our clients</h3>
+                      <p>The core of our business. We will listen to our clients and provide outstanding service at all times.</p>
+                    </div>
                   </div>
-               </li>
-               <% end %>
-            </ul>
-         </div>
-         <div class="hr-invisible"></div>
+                  <div class="cta-bottom boxes" style="height: 463px;">
+                    <img src="http://www.ultimatesecurity.co.uk/wp-content/uploads/2015/10/clients.jpg" alt="Our clients" class="alignnone size-full wp-image-178">
+                    <span class="black-down"></span>
+                  </div>
+                </div><!-- box-1 -->  
+                <div class="cta-box">
+                  <div class="cta-top boxes" style="height: 463px;"><img src="http://www.ultimatesecurity.co.uk/wp-content/uploads/2015/10/16yrs.jpg" alt="Our experience" class="alignnone size-full wp-image-179">
+                    <span class="black"></span>
+                  </div>
+                  <div class="cta-bottom boxes balck-bg" style="height: 463px;">
+                    <div class="text-box">
+                      <h3 class="yellow-color">Our experience</h3>
+                      <p>We have a great deal of expertise in delivering security, front of house, and corporate reception services to prestige clients. We are committed to being the best – big enough to cope with the largest project, yet small enough to maintain the personal service that has brought us success.</p>
+                    </div>
+                  </div>
+                </div><!-- box-1 -->  
+                <div class="cta-box">
+                  <div class="cta-top boxes yellow-bg" style="height: 463px;">
+                    <div class="text-box">
+                      <h3>Our people</h3>
+                      <p>We employ people who are passionate and committed to Ultimate and our clients. Our colleagues are valued, and their development is encouraged. We recognise excellent individual and team performances, and reward success.</p>
+                    </div>
+                  </div>
+                  <div class="cta-bottom boxes" style="height: 463px;">
+                    <img src="http://www.ultimatesecurity.co.uk/wp-content/uploads/2015/10/people.jpg" alt="Our people" class="alignnone size-full wp-image-180">
+                    <span class="yellow"></span>
+                  </div>
+                </div><!-- box-1 -->  
+                <div class="cta-box">
+                  <div class="cta-top boxes" style="height: 463px;">
+                    <img src="http://www.ultimatesecurity.co.uk/wp-content/uploads/2015/10/values.jpg" alt="Our values" class="alignnone size-full wp-image-181">
+                    <span class="yellow-up"></span>
+                  </div>
+                  <div class="cta-bottom boxes yellow-bg" style="height: 463px;">
+                    <div class="text-box">
+                      <h3>Our values</h3>
+                      <p>Ultimate Security is an entrepreneurial, creative and open-minded company. We believe in high standards of ethics, integrity, and fairness in all aspects of our business and are committed to open and honest relationships with our clients. Vigilance. Integrity. Service Excellence. Innovative. One Team. Nurturing. – VISION.</p>
+                    </div>
+                  </div>
+                </div><!-- box-1 -->  
+                <div class="cta-box">
+                  <div class="cta-top boxes balck-bg" style="height: 463px;">
+                    <div class="text-box">
+                      <h3 class="yellow-color">Our service</h3>
+                      <p>We take pride in delivering excellent service at all times. With exceptional attention to detail, we constantly strive to find a better solution for our clients’ challenges.</p>
+                    </div>
+                  </div>
+                  <div class="cta-bottom boxes" style="height: 463px;">
+                    <img src="http://www.ultimatesecurity.co.uk/wp-content/uploads/2015/10/building.jpg" alt="Building" class="alignnone size-full wp-image-182">
+                    <span class="black-down"></span>
+                  </div>
+                </div><!-- box-1 -->
+                <br style="clear:both">
+              </div></div></div>
+            </div>
+          </div>
+        </div></div></div>
       </div>
-      <% if user_signed_in? %>
-            <%= link_to 'New Testimonial', new_testimonial_path, class: "z-back pull-right" %>
-            <% end %>
+      <div class="clear"></div>
+      <div class="hr-invisible"></div>
+
+      <div class="fullwidth-section dt-sc-parallax-section dt-sc-counters">
+        <div class="fullwidth-bg">
+         <div class="container">
+          <div class="hr-invisible"></div>
+          <div class="hr-invisible-very-very-small"></div>
+          <div class="column dt-sc-one-fourth first animate" data-delay="100" data-animation="animated fadeIn">
+           <div class="dt-sc-counter">
+            <div class="counter-effect"></div>
+            <div class="dt-sc-counter-number">
+             <p data-value="50">50</p>
+             <span>+</span>
+           </div>
+           <h5> Projects </h5>
+         </div>
+       </div>
+       <div class="column dt-sc-one-fourth animate" data-delay="300" data-animation="animated fadeIn">
+         <div class="dt-sc-counter">
+          <div class="counter-effect"></div>
+          <div class="dt-sc-counter-number">
+           <p data-value="95">95</p>
+           <span>%</span>
+         </div>
+         <h5> Happy Customers </h5>
+       </div>
+     </div>
+     <div class="column dt-sc-one-fourth animate" data-delay="500" data-animation="animated fadeIn">
+       <div class="dt-sc-counter">
+        <div class="counter-effect"></div>
+        <div class="dt-sc-counter-number">
+         <p data-value="90">90</p>
+         <span>%</span>
+       </div>
+       <h5> Positive Feedbacks </h5>
+     </div>
    </div>
+   <div class="column dt-sc-one-fourth animate" data-delay="700" data-animation="animated fadeIn">
+     <div class="dt-sc-counter">
+      <div class="counter-effect"></div>
+      <div class="dt-sc-counter-number">
+       <p data-value="98">98</p>
+       <span>%</span>
+     </div>
+     <h5> Repeat Clients </h5>
+   </div>
+ </div>
+ <div class="hr-invisible"></div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+
+<div class="hr-invisible"  id="services"></div>
+<div class="fullwidth-section dt-service-hme">
+  <div class="container">
+   <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
+    Our Services
+  </h2>
+
+  <% Service.all.each do |service|%>
+  <div class="column dt-sc-one-third first animate" data-delay="100" data-animation="animated fadeIn">
+    <div class="dt-sc-service type1">
+     <h4 style="color: #3cf5f3;"><%= service.title%></h4>
+     <figure class="gallery-thumb">
+      <%= link_to service_path(service)  do%>
+      <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape first-img"%>
+      <%= image_tag service.image.url(:medium), alt: "", class: "attachment-gallery-with-shape second-img"%>
+      <% end %>
+    </figure>
+    <div class="gallery-details">
+      <p><%= service.short_description %></p>
+      <%#= link_to "Read More", service_path(service), style: 'color: #3dfbfa' %>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+<% if user_signed_in? %>
+<%= link_to 'New Service', new_service_path, class: "z-back pull-right" %>
+<% end %>
+</div>
+<div class="clear"></div>
+<div class="hr-invisible" id="testimonials"></div>
+
+<div class="fullwidth-section dt-sc-parallax-section dt-sc-client-testimonial">
+  <div class="fullwidth-bg">
+   <div class="container">
+    <div class="hr-invisible"></div>
+    <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
+      TESTIMONIALS
+    </h2>
+    <div class="dt-sc-testimonial-carousel-wrapper">
+      <ul class="dt-sc-testimonial-carousel">
+       <% Testimonial.all.each do |testominal|%>
+       <li>
+        <div class="dt-sc-testimonial">
+         <blockquote>
+          <q>
+           <%= testominal.description %>
+         </q>
+       </blockquote>
+       <div class="author">
+        <span class="hexagon2"></span> 
+        <div class="hexagon-image">
+         <div class="hexagon-in1">
+          <div class="hexagon-in2 founder-image img1">
+           <%= image_tag testominal.image.url, alt: ""%>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="author-detail">
+    <%= testominal.name %>  <span> <%= testominal.place %> </span>
+    <% if user_signed_in? %>
+    <%#= link_to "New", new_testimonial_path(testominal), class: "btn btn-success z-btn"%>
+    <%= link_to "Edit", edit_testimonial_path(testominal), class: "btn btn-success z-btn" %>
+    <%= link_to "Delete", testimonial_path(testominal), class: "btn btn-danger z-btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+</div>
+</li>
+<% end %>
+</ul>
+</div>
+<div class="hr-invisible"></div>
+</div>
+<% if user_signed_in? %>
+<%= link_to 'New Testimonial', new_testimonial_path, class: "z-back pull-right" %>
+<% end %>
+</div>
 </div>
 <div class="clear"></div>
 <div class="hr-invisible" id="contact"></div>
 
 <div class="fullwidth-section dt-sc-center">
-   <h2 class="border-title aligncenter align animate" data-delay="100" data-animation="animated fadeInDown">
-      Make a special Appointment
-   </h2>
-   <div class="container">
-      <%= form_tag("/contacts", method: "post") do %>
-      <div class="column dt-sc-one-half first animate" data-delay="100" data-animation="animated fadeIn">
-         <p>
-            <input type="text" name="username" placeholder="Your Name (required)" required/> </p>
-         </div>
-         <div class="column dt-sc-one-half animate" data-delay="300" data-animation="animated fadeIn">
-            <p><input type="number" required name="txtname" placeholder="Your Phone (required)"/></p>
-         </div>
-         <div class="">
-            <p><input type="email" name="txtemail" placeholder="Email (required)"/></p>
-         </div>
-         <div class="column dt-sc-one-column animate" data-delay="500" data-animation="animated fadeIn">
-            <p><textarea class="message" rows="10" placeholder="Comments(required)" cols="5" name="txtmessage"></textarea></p>
-         </div> 
+ <h2 class="border-title aligncenter align animate" data-delay="100" data-animation="animated fadeInDown">
+  Make a special Appointment
+</h2>
+<div class="container">
+  <%= form_tag("/contacts", method: "post") do %>
+  <div class="column dt-sc-one-half first animate" data-delay="100" data-animation="animated fadeIn">
+   <p>
+    <input type="text" name="username" placeholder="Your Name (required)" required/> </p>
+  </div>
+  <div class="column dt-sc-one-half animate" data-delay="300" data-animation="animated fadeIn">
+    <p><input type="number" required name="txtname" placeholder="Your Phone (required)"/></p>
+  </div>
+  <div class="">
+    <p><input type="email" name="txtemail" placeholder="Email (required)"/></p>
+  </div>
+  <div class="column dt-sc-one-column animate" data-delay="500" data-animation="animated fadeIn">
+    <p><textarea class="message" rows="10" placeholder="Comments(required)" cols="5" name="txtmessage"></textarea></p>
+  </div> 
 
-         <ul class="phone">
-            <li><i class="fa fa-mobile-phone"></i>
-               +91 8951411747
-            </li>
-            <li><i class="fa fa-envelope-o"></i>
-               <a href="mailto:yourname@somemail.com">admin@blackstonesecurity.in</a>
-            </li>
-         </ul>
-         <div class="form-row aligncenter">
-            <input type="submit" value="submit" name="submit">
-         </div>
-         <% end %>
-         <div id="ajax_contactform_msg"> </div>
-      </div>
-      <div class="dt-sc-ico-content type1 select">
-         <div class="icon">
-            <span class="hexagon">
-               <span class="corner1"></span>
-               <span class="corner2"></span>
-               <img src="<%= asset_url ('logo.png') %>" style="width: 90px;" alt="" title="" />
-               <span class="hexagon1">
-                  <span class="corner1"></span>
-                  <span class="corner2"></span>
-               </span>
-            </span>
-         </div>
-      </div>
-   </div>
-   <div class="clear"></div>
-   <div class="hr-invisible"></div>
-   <div class="hr-invisible-small"></div>
+  <ul class="phone">
+    <li><i class="fa fa-mobile-phone"></i>
+     +91 8951411747
+   </li>
+   <li><i class="fa fa-envelope-o"></i>
+     <a href="mailto:yourname@somemail.com">admin@blackstonesecurity.in</a>
+   </li>
+ </ul>
+ <div class="form-row aligncenter">
+  <input type="submit" value="submit" name="submit">
+</div>
+<% end %>
+<div id="ajax_contactform_msg"> </div>
+</div>
+<div class="dt-sc-ico-content type1 select">
+ <div class="icon">
+  <span class="hexagon">
+   <span class="corner1"></span>
+   <span class="corner2"></span>
+   <img src="<%= asset_url ('logo.png') %>" style="width: 90px;" alt="" title="" />
+   <span class="hexagon1">
+    <span class="corner1"></span>
+    <span class="corner2"></span>
+  </span>
+</span>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="hr-invisible"></div>
+<div class="hr-invisible-small"></div>
 </div>
