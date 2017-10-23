@@ -40,7 +40,7 @@
   <div class="hr-invisible" id="about"></div>
 
   <div class="container z-about">
-   <% @abouts.where(title: :OurMission).each do |about| %>
+   <% @abouts.where(:title =>  "Our Mission").each do |about| %>
    <div class="row" id="about">
     <h3 class="border-title">
       <%= about.title %>
@@ -81,7 +81,7 @@
 
 
 
-  <% @abouts.where(title: :BusinessPrinciples).each do |about| %>
+  <% @abouts.where(:title => "Business Principles").each do |about| %>
   <div class="row">
    <h3 class="border-title z-business">
     <%= about.title %>
