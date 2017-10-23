@@ -31,13 +31,13 @@
 }
 .boxes span.black {
   bottom: 0;
-  background-image: url('images/balck-arrow.png')
+  //background-image: url('images/balck-arrow.png')
 }
 .boxes span.yellow {
   top: 0;
   width: 35px;
   height: 17px;
-  background-image: url('images/yellow-arrow.png');
+  //background-image: url('images/yellow-arrow.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -45,13 +45,13 @@
   bottom: 0;
   width: 35px;
   height: 17px;
-  background-image: url('images/yellow-arrow-up.png');
-    background-repeat: no-repeat;
+  //background-image: url('images/yellow-arrow-up.png');
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .boxes span.black-down {
   top: 0;
-  background-image: url('images/balck-down.png')
+  //background-image: url('images/balck-down.png')
 }
 .boxes img {
   position: relative;
