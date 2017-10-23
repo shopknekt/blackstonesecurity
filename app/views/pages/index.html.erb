@@ -101,7 +101,7 @@
               <div class="dt-sc-frame">
                 <div class="dt-sc-content" style="text-align: center;">
                   <p>
-                    <%= about.description %>
+                    <%= raw about.description %>
                   </p>
                   <%#= link_to "Read More", abouts_path, style: 'color: #3dfbfa',class: "pull-right" %>
                   <% if user_signed_in? %>
