@@ -53,7 +53,7 @@
 
 
 <div class="col-md-6">
-  <% @abouts.where(title: :OurMission).each do |about| %>
+  <% @abouts.where(:title => "Our Mission").each do |about| %>
   <div class="container">
     <div class="col-md-7">
     <h2 class="border-title aligncenter">
@@ -94,7 +94,7 @@
       <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
         Why People Choose Us?
       </h2>
-      <% @abouts.where(title: :WhyUs).each do |about| %>
+      <% @abouts.where(:title => "Why Us").each do |about| %>
       <div class="col-md-12 first animate" data-delay="100" data-animation="animated fadeInLeft">
         <h3 class="border-title">
           <%= about.title %>
