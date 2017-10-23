@@ -383,6 +383,13 @@ code {
     float: left;
     width: 100%;
 }
+.z-bg{
+    background-color: rgba(0, 0, 0, 0.85);
+    float: left;
+    width: 100%;
+    background:image-url('b1.jpg');
+    background-size: cover;
+}
 .fullwidth-section.news-letter {
     background: #353737;
 }
@@ -856,7 +863,7 @@ img {
     width: 100%;
     margin: 0px;
     float: left;
-    position: fixed;
+    //position: fixed;
     z-index: 999;
     background: rgba(0, 0, 0, 0.76);
     border-top: 2px solid;
@@ -1050,11 +1057,11 @@ a.dt-menu-expand {
     line-height: normal;
 }
 #main-menu ul.menu {
-    float: left;
+    float: right;
     margin: 0;
     padding: 0px;
     text-align: center;
-    width: 100%;
+    width: 900px;
 }
 #main-menu ul.menu > li {
     margin: 0px;
@@ -5637,4 +5644,7 @@ figure.photostack-current::after {
 
 a:visited {
     color: #3efcfa;
+}
+.z-text{
+    color: #fff;
 }
