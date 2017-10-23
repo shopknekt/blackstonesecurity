@@ -26,9 +26,14 @@ class ContactsController < ApplicationController
   # POST /contacts.json
   def create
     @contact = Contact.create(contact_params)
-      if @contact.present?
-        redirect_to  contacts_path
-      end
+      @contact.request = request
+    if @contact.deliver
+      flash.now[:error] = nil
+      flash.now[:notice] = 'Thank you for your message!'
+    else
+      flash.now[:error] = 'Cannot send message.'
+      render :new
+    end
   end
 
   # PATCH/PUT /contacts/1
@@ -63,6 +68,6 @@ class ContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.permit(:username, :txtemail, :txtname, :txtmessage)
+      params.permit(:name, :txtemail, :txtname, :txtmessage)
     end
 end

@@ -1,11 +1,16 @@
-class Contact < ActiveRecord::Base
+class Contact < MailForm::Base
 
-	def self.create(e)
-	obj = Contact.new
-	obj.name = e[:username]
-	obj.email = e[:txtemail]
-	obj.phone = e[:txtname]
-	obj.message = e[:txtmessage]
-	obj.save
-	end
+attribute :username,      :validate => true
+attribute :txtemail,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+attribute :txtmessage
+
+
+def headers
+    {
+      :subject => "My Contact Form",
+      :to => "shahrutul111@gmail.com",
+      :from => %("#{name}" <#{email}>)
+    }
+  end
+
 end

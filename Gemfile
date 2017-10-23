@@ -23,6 +23,7 @@ gem 'capistrano-rails'
 gem 'seed_dump'
 gem 'simple_form'
 gem 'ratyrate'
+gem 'mail_form'
 
 group :development, :test do
   gem 'byebug'
