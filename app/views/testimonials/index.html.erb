@@ -22,6 +22,13 @@
    </div>
    <div class="author-detail">
     <%= testimonial.name %>  <span> <%= testimonial.place %> </span>
+     <div class="small-2 large-4 columns">
+    <% if user_signed_in? %>
+    <%= rating_for testimonial, "visual_effects", stars: 10, space: true,disable_after_rate: false,half_show: false %>
+    <% else %>
+    <%= rating_for testimonial, "visual_effects", stars: 10%>
+    <% end %>
+  </div>
   </div>
 </div>
 </li>

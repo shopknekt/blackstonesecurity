@@ -22,6 +22,7 @@ gem 'ckeditor'
 gem 'capistrano-rails'
 gem 'seed_dump'
 gem 'simple_form'
+gem 'ratyrate'
 
 group :development, :test do
   gem 'byebug'
