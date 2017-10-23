@@ -1,14 +1,42 @@
 <header id="header" class="type1">
+  <div class="header">
+    <div class="container">
+      <div class="col-xs-12 col-sm-6">
+        <div id="logo">
+          <h3>
+            <%= link_to root_path do%>
+            <%= image_tag("logo.png", alt: "blackstone security logo") %>
+            <span class=""> BLACKSTONE</span><br> 
+            <h5 class="alter_color" style="margin-left: 45px;margin-top: -13px;">
+            SECURITY SERVICES</h5>
+            <% end %>
+          </h3>
+        </div>
+            </div>
+            <div class="col-xs-10 col-sm-6 text-right phone-details">
+                <h3 class="text-blue text-uppercase z-text">Mobile No - 24 Hours</h3>
+
+                <p class="phone-no">
+                    <a href="tel:08082748839" class="InfinityNumber12591 z-text">+91 9898 090206</a>
+                </p>
+            </div>
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="mobile-toggle col-xs-2 col-sm-1">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".js-collapse-target" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
  <div class="container-fluid">
   <div class="main-menu-container">
    <div class="main-menu">
-    <div id="logo">
-      <h2>
-        <%= link_to root_path do%>
-        <%= image_tag("logo.png", alt: "blackstone security logo") %><span><span class="alter_color"> BLACKSTONE</span> SECURITY</span>
-        <% end %>
-      </h2>
-    </div>
     <div id="primary-menu">
      <div class="dt-menu-toggle" id="dt-menu-toggle">Menu<span class="dt-menu-toggle-icon"></span></div>
      <nav id="main-menu">
