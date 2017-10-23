@@ -23,7 +23,10 @@
        <%= link_to root_path(anchor: "services"), class: "js-scroll-trigger" do%>Services<% end %>
      </li>
      <li class="menu-item-simple-parent">
-      <%= link_to "Clients", root_path(anchor: "testimonials"), class: "js-scroll-trigger" %>
+      <%= link_to "Testimonials", root_path(anchor: "testimonials"), class: "js-scroll-trigger" %>
+    </li>
+     <li class="menu-item-simple-parent">
+      <%= link_to "Clients", testimonials_path, class: "js-scroll-trigger" %>
     </li>
     <li class="menu-item-simple-parent">
       <%= link_to "Contact Us", root_path(anchor: "contact"), class: "js-scroll-trigger" %>
