@@ -1049,19 +1049,17 @@ a.dt-menu-expand {
 /*----*****---- << 03. Menu >> ----*****----*/
 
 #main-menu {
-    float: right;
-    margin: 0;
+    margin: 0 auto;
     padding: 0px;
     position: relative;
     z-index: 100;
     line-height: normal;
 }
 #main-menu ul.menu {
-    float: right;
-    margin: 0;
+    margin: 0 auto;
     padding: 0px;
     text-align: center;
-    width: 900px;
+    display: table;
 }
 #main-menu ul.menu > li {
     margin: 0px;
