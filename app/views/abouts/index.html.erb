@@ -14,39 +14,36 @@
 </section>
 <div class="hr-invisible"></div>
 <div class="clear"></div>
+
 <% if user_signed_in? %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <%= link_to "Create New About", new_about_path, class: "z-back"%>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= link_to "Create New About", new_about_path, class: "z-back"%>
+      </div>
     </div>
   </div>
-</div>
 <% end %>
+
 <section id="primary" class="content-full-width">
+  <div class="container">
   <div class="row">
     <div class="col-md-6">
       <% @abouts.where(title: :About).each do |about| %>
-      <div class="container">
         <h2 class="border-title aligncenter">
           <%= about.title %>
         </h2>
 <!-- <div class="col-md-6">
     <%#= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
   </div> -->
-  <div class="col-md-6 col-md-offset-2">
-    <center>
+  <center>
+    <p>
      <%= raw about.description %>
-   </center>
- </div>
-</div>
-<br>
-<br>
-<div class="container">
-  <% if user_signed_in? %>
-  <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
-  <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
-</div>
+   </p>
+ </center>
+<% if user_signed_in? %>
+<%= link_to "Edit", edit_about_path(about),class: "z-back" %>
+<%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
 <% end %>
 <% end %>
 </div>
@@ -54,33 +51,23 @@
 
 <div class="col-md-6">
   <% @abouts.where(:title => "Our Mission").each do |about| %>
-  <div class="container">
-    <div class="col-md-7">
-    <h2 class="border-title aligncenter">
-      <%= about.title %>
-    </h2>
+      <h2 class="border-title aligncenter">
+        <%= about.title %>
+      </h2>
 <!-- <div class="col-md-6">
     <%#= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
   </div> -->
 
-    <center>
-     <%= raw about.description %>
-   </center>
- </div>
-</div>
-<br>
-<br>
-<div class="container">
+  <center>
+   <%= raw about.description %>
+ </center>
   <% if user_signed_in? %>
   <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
   <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
   <% end %>
-</div>
 <% end %>
 </div>
-
-
-
+</div>
 </div>
 </section>
 
