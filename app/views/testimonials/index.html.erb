@@ -1,34 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Testimonials</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Place</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @testimonials.each do |testimonial| %>
-      <tr>
-        <td><%= testimonial.name %></td>
-        <td><%= testimonial.description %></td>
-        <td><%= testimonial.image %></td>
-        <td><%= testimonial.place %></td>
-        <td><%= link_to 'Show', testimonial %></td>
-        <td><%= link_to 'Edit', edit_testimonial_path(testimonial) %></td>
-        <td><%= link_to 'Destroy', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-
-<%= link_to 'New Testimonial', new_testimonial_path, class: "z-back" %>
-
-
+<div class="fullwidth-section dt-sc-parallax-section dt-sc-client-testimonial" style="margin-top: 120px;">
+  <div class="fullwidth-bg">
+   <div class="container">
+    <div class="hr-invisible"></div>
+    <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
+      TESTIMONIALS
+    </h2>
+    <div class="dt-sc-testimonial-carousel-wrapper">
+      <ul class="dt-sc-testimonial-carousel">
+      <% @testimonials.each do |testimonial| %>
+       <li>
+        <div class="dt-sc-testimonial">
+       <div class="author">
+        <span class="hexagon2"></span> 
+        <div class="hexagon-image">
+         <div class="hexagon-in1">
+          <div class="hexagon-in2 founder-image img1">
+           <%= image_tag testimonial.image.url, alt: ""%>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="author-detail">
+    <%= testimonial.name %>  <span> <%= testimonial.place %> </span>
+  </div>
+</div>
+</li>
+<% end %>
+</ul>
+</div>
+<div class="hr-invisible"></div>
+</div>
+</div>
+</div>
