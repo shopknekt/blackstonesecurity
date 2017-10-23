@@ -24,7 +24,7 @@ About.create!([
     image_file_size: 81431, image_updated_at: "2017-10-10 17:14:30"
     },
   {
-    title: "OurMission", 
+    title: "Our Mission", 
     description: "To extend our value-added security services to quality-conscious clients who consider security an equal important subject by making security services as a very organized business services. we want to give you a flavor of BlackStone’s character as a company, an overview of the way we do business with our clients, and how we select and develop our people. We make our clients feel secure, valued, and part of the BlackStone Security team. It is feature of the way we do business that our Exservicemen personnel take personal responsibility for our clients, their requirements, and the business relationships. Since BlackStone Security was founded, we’ve been privileged to act as the guardians. We understand our client’s needs and challenges and deliver, time and time again. We are constantly striving to raise the industry’s standards and transforming security services from unorganized to organized business services.",
     image_file_name: "mission.png", 
     image_content_type: "image/png", 
@@ -32,7 +32,7 @@ About.create!([
     image_updated_at: "2017-10-12 10:37:32"
     },
   {
-    title: "BusinessPrinciples", 
+    title: "Business Principles", 
     description: "These principles guide our business strategies, our ethical behaviour, and our relationships with customers, communities, and each other. BlackStone Security offers a wide variety of security services to Corporates, Hotels and Restaurants, Schools, Construction sites, Retail facilities, Hospitals, Apartments, Residences, and Shopping Malls.",
      image_file_name: "bp.jpg", 
      image_content_type: "image/jpeg", 
@@ -41,6 +41,15 @@ About.create!([
    }
 ])
 Service.create!([
+  {
+    title: "Security Services", 
+    short_description: "We take real pride in delivering the highest levels of service to our prestigious client base...", 
+    description: "<p>We&nbsp;take&nbsp;real&nbsp;pride&nbsp;in&nbsp;delivering&nbsp;the&nbsp;highest&nbsp;levels&nbsp;of&nbsp;service&nbsp;to&nbsp;our&nbsp;prestigious&nbsp;client&nbsp;base. With&nbsp;many&nbsp;years&nbsp;of&nbsp;industry&nbsp;expertise&nbsp;and&nbsp;knowledge,&nbsp;we&nbsp;ensure&nbsp;the&nbsp;right&nbsp;solution&nbsp;is&nbsp;delivered&nbsp;every&nbsp;time.</p>\r\n", 
+    image_file_name: "Security_Services.jpg", 
+    image_content_type: "image/jpeg", 
+    image_file_size: 133616, 
+    image_updated_at: "2017-10-17 06:46:31"
+  },
   {
     title: "Reception Services", 
     short_description: "Corporate Offices where BlackStone’s corporate reception teams are deployed, our clients can be reassured that their guests will be effortlessly assisted.", 
@@ -59,15 +68,7 @@ Service.create!([
     image_file_size: 86342, 
     image_updated_at: "2017-10-17 06:46:13"
     },
-  {
-    title: "Security Services", 
-    short_description: "We take real pride in delivering the highest levels of service to our prestigious client base...", 
-    description: "<p>We&nbsp;take&nbsp;real&nbsp;pride&nbsp;in&nbsp;delivering&nbsp;the&nbsp;highest&nbsp;levels&nbsp;of&nbsp;service&nbsp;to&nbsp;our&nbsp;prestigious&nbsp;client&nbsp;base. With&nbsp;many&nbsp;years&nbsp;of&nbsp;industry&nbsp;expertise&nbsp;and&nbsp;knowledge,&nbsp;we&nbsp;ensure&nbsp;the&nbsp;right&nbsp;solution&nbsp;is&nbsp;delivered&nbsp;every&nbsp;time.</p>\r\n", 
-    image_file_name: "Security_Services.jpg", 
-    image_content_type: "image/jpeg", 
-    image_file_size: 133616, 
-    image_updated_at: "2017-10-17 06:46:31"
-  }
+  
 ])
 Testimonial.create!([
   {
