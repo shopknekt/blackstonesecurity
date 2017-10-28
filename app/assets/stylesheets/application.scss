@@ -54,3 +54,16 @@ input[type="text"], input[type="password"], input[type="email"], input[type="url
 h3.border-title.z-business {
     text-align: -webkit-center;
 }
+
+
+@media only screen and (min-width: 400px) and (max-width: 700px) {
+.z-media{
+        position: relative;
+    left: -200px; 
+    box-sizing: border-box;
+     width: 700px!important;
+}
+.z-res{
+    margin-top: 80px;
+}
+}
