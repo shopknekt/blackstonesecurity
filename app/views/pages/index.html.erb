@@ -13,7 +13,7 @@
       <div class="z-homeslider-Wrapper">
         <h2 class="animated zoomInLeft">Our Values</h2>
         <h3 class="animated zoomInLeft">Vigilance. Integrity. Service Excellence.   <br /> One Team. Innovative. Nurturing.</h3>
-        <!-- <a href="#" class="animated zoomInLeft">read more</a> -->
+        <a href="#" class="animated zoomInLeft">read more</a>
       </div>
     </div>
     <div class="item">
@@ -83,9 +83,8 @@
 
   <% @abouts.where(:title => "Business Principles").each do |about| %>
   <div class="row">
-   <h3 class="border-title z-business">
-    <%= about.title %>
-    <hr align="left" width="20%">
+   <h3 class="border-title">
+      <%= about.title %>
   </h3>
         <!-- <div class="col-md-6 animate" data-delay="100" data-animation="animated fadeInLeft">
             <div class="dt-sc-toggle-frame-set">
@@ -99,7 +98,7 @@
           <div class="col-md-12 animate" data-delay="100" data-animation="animated fadeInLeft">
             <div class="dt-sc-toggle-frame-set">
               <div class="dt-sc-frame">
-                <div class="dt-sc-content" style="text-align: center;">
+                <div class="dt-sc-content">
                   <p>
                     <%= raw about.description %>
                   </p>
@@ -148,7 +147,7 @@
                   <div class="cta-top boxes yellow-bg" style="height: 463px;">
                     <div class="text-box">
                       <h3>Our people</h3>
-                      <p>We employ people who are passionate and committed to Ultimate and our clients. Our colleagues are valued, and their development is encouraged. We recognise excellent individual and team performances, and reward success.</p>
+                      <p>We employ people who are passionate and committed to Blackstone and our clients. Our colleagues are valued, and their development is encouraged. We recognise excellent individual and team performances, and reward success.</p>
                     </div>
                   </div>
                   <div class="cta-bottom boxes" style="height: 463px;">
@@ -243,9 +242,9 @@
 <div class="hr-invisible"  id="services"></div>
 <div class="fullwidth-section dt-service-hme">
   <div class="container">
-   <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
-    Our Services
-  </h2>
+    <h3 class="border-title animate" data-delay="100" data-animation="animated fadeInDown">
+      Our Services
+  </h3>
 
   <% Service.all.each do |service|%>
   <div class="column dt-sc-one-third first animate" data-delay="100" data-animation="animated fadeIn">
