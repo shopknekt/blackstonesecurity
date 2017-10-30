@@ -56,7 +56,7 @@ h3.border-title.z-business {
 }
 
 
-@media only screen and (min-width: 400px) and (max-width: 700px) {
+@media only screen and (min-width: 300px) and (max-width: 700px) {
 .z-media{
         position: relative;
     left: -200px; 
@@ -65,5 +65,11 @@ h3.border-title.z-business {
 }
 .z-res{
     margin-top: 80px;
+}
+.alter_color {
+    color: #fff;
+    margin-left: 0px !important;
+     margin-top: 10px!important; 
+    letter-spacing: 23px;
 }
 }
