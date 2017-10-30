@@ -116,7 +116,7 @@
         <br><br>
       </div>
 
-        <div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid vc_custom_1441997752752 z-media" style="position: relative; "><div class="wpb_column vc_column_container vc_col-sm-12 vc_custom_1441997764134"><div class="wpb_wrapper">
+        <div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid vc_custom_1441997752752 z-media hidden-xs" style="position: relative; "><div class="wpb_column vc_column_container vc_col-sm-12 vc_custom_1441997764134"><div class="wpb_wrapper">
           <div class="wpb_widgetised_column wpb_content_element">
             <div class="wpb_wrapper">
               <div><div class="textwidget"><div class="wide-column">
@@ -324,7 +324,6 @@
 <% end %>
 </ul>
 </div>
-<div class="hr-invisible"></div>
 </div>
 <% if user_signed_in? %>
 <%= link_to 'New Testimonial', new_testimonial_path, class: "z-back pull-right" %>
@@ -334,7 +333,7 @@
 
 <div class="fullwidth-section dt-sc-center"  id="contact">
  <h2 class="border-title aligncenter align animate" data-delay="100" data-animation="animated fadeInDown">
-  Make a special Appointment
+  Connect With Us
 </h2>
 <div class="container">
   <%= form_tag("/contacts", method: "post") do %>
