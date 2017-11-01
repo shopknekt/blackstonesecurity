@@ -12,9 +12,10 @@
 
                 <ul class="hide-bullets">
                   <% @galleries.each do |gallery| %>
+                    <% gallery.images.each do |image|%>
                     <li class="col-sm-4">
                         <%= link_to class: "thumbnail", id: "carousel-selector-0" do%>
-                        <%= image_tag gallery.image.url %>
+                        <%= image_tag(image.url) %>
                          <h3 style="color: #3dfbfa"><%= gallery.title %></h3>
                         <% end %>
                         <br>
@@ -24,6 +25,7 @@
                         <%= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' }, style: 'color: #3dfbfa' %>
                         <% end %>
                     </li>
+                     <% end %>
                     <% end %>
                 </ul>
             </div>
