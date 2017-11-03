@@ -1,6 +1,4 @@
-
-
-@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Josefin+Sans');
 @charset "utf-8";
 body {
     font-weight: normal;
@@ -9,14 +7,14 @@ body {
     margin: 0;
     background: #2b2d2d;
     line-height: normal;
-    font-family: 'Saira Semi Condensed', sans-serif!important;
 }
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
 }
-/*----*****---- << 01. Fonts >> ----*****----*/
+
 
 body,
 textarea,
@@ -46,6 +44,11 @@ h6 {
     line-height: normal;
     margin-bottom: 30px;
 }
+
+h1, h2, h3 {
+    font-family: 'Audiowide', cursive!important;
+}
+
 h1 a,
 h2 a,
 h3 a,
@@ -1982,6 +1985,7 @@ ul.shop-times li:hover::after {
 .dt-sc-service.type2.right h3.gallery-details,
 .dt-sc-service.type2.right p.dt-sc-price-tag {
     text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
 }
 .dt-sc-service.type1:hover .first-img,
 .dt-sc-service.type2:hover .first-img {
@@ -5417,6 +5421,7 @@ figure.photostack-current::after {
   text-align: center;
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
+  height: 150px;
 }
 .z-homeslider-section-s .z-homeslider-Wrapper  > h3 {
   color: #ffffff;
@@ -5427,7 +5432,7 @@ figure.photostack-current::after {
   letter-spacing: 5px;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif!important;
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
   -webkit-animation-duration: 1s;
@@ -5445,7 +5450,7 @@ figure.photostack-current::after {
   letter-spacing: 1px;
   text-transform: capitalize;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Lora', serif;
+  font-family: 'Lora', serif!important;
   -webkit-animation-delay: 1.1s;
   animation-delay: 1.1s;
   -webkit-animation-duration: 1s;
@@ -5460,7 +5465,7 @@ figure.photostack-current::after {
   text-shadow: none;
   letter-spacing: 2px;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif!important;
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
   -webkit-animation-duration: 1s;
