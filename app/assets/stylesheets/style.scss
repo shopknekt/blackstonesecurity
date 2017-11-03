@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide|Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Manuale');
+
 @charset "utf-8";
 body {
     font-weight: normal;
@@ -12,7 +14,7 @@ p, * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', sans-serif!important;
 }
 
 
@@ -1015,9 +1017,14 @@ a.dt-menu-expand {
 
 #logo h3 {
     margin-top: 20px;
-    font-family: 'Libre Baskerville', serif;
     letter-spacing: 2px;
     font-size: 33px;
+}
+
+#logo a span{
+    font-family: 'Manuale', serif!important;
+    font-size: 45px;
+    font-weight: 600;
 }
 #logo a {
     width: 100%;
@@ -1038,7 +1045,7 @@ a.dt-menu-expand {
     color: #fff;
     margin-left: 84px!important;
     margin-top: -13px;
-    letter-spacing: 23px;
+    letter-spacing: 20px;
 }
 
 #logo>span {
@@ -2023,7 +2030,7 @@ ul.shop-times li:hover::after {
 }
 .gallery-details p {
     color: #f2e9e1;
-    font-size: 13px;
+    font-size: 16px;
     padding: 0 18px;
 }
 a.dt-sc-explore {
@@ -3891,7 +3898,6 @@ a.btn-icon:hover i.fa {
     margin: 0;
     padding: 40px 0;
     width: 100%;
-    margin-top: 102px;
 }
 .breadcrumb-wrapper .breadcrumb {
     float: left;

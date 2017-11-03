@@ -1,5 +1,5 @@
 <div id="main">
- <div id="z-homeslider" class="carousel z-homeslider-section-s"  data-pause="hover"  data-ride="carousel" data-duration="500">
+ <div id="z-homeslider" class="carousel z-homeslider-section-s"  data-pause="hover"  data-ride="carousel" data-duration="100">
 
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -289,16 +289,16 @@
            <%= testominal.description %>
          </q>
        </blockquote>
-       <div class="author">
-        <span class="hexagon2"></span> 
-        <div class="hexagon-image">
+       <!-- <div class="author"> -->
+        <!-- <span class="hexagon2"></span>  -->
+       <!--  <div class="hexagon-image">
          <div class="hexagon-in1">
           <div class="hexagon-in2 founder-image img1">
-           <%= image_tag testominal.image.url, alt: ""%>
+           <%#= image_tag testominal.image.url, alt: ""%>
          </div>
        </div>
-     </div>
-   </div>
+     </div> -->
+   <!-- </div> -->
    <div class="author-detail">
     <%= testominal.name %>  <span> <%= testominal.place %> </span>
   <br>
@@ -352,10 +352,9 @@
   </div> 
 
   <ul class="phone">
-    <li><i class="fa fa-phone"></i> 080 2668 1440 
-      | <i class="fa fa-mobile"></i> +91 9898 090206
+    <li><i class="fa fa-phone" style="font-size: 12px;"></i>080 2668 1440  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-mobile"  style="font-size: 12px;"></i>+91 9898 090206
    </li>
-   <li><i class="fa fa-envelope-o"></i>
+   <li><i class="fa fa-envelope-o" style="font-size: 12px;"></i>
      <a href="mailto:yourname@somemail.com">admin@blackstonesecurity.in</a>
    </li>
  </ul>
@@ -379,7 +378,4 @@
 </div>
 </div>
 </div>
-<div class="clear"></div>
-<div class="hr-invisible"></div>
-<div class="hr-invisible-small"></div>
 </div>

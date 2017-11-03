@@ -27,47 +27,36 @@
 
 <section id="primary" class="content-full-width">
   <div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <% @abouts.where(title: :About).each do |about| %>
-        <h2 class="border-title aligncenter">
+    <div class="row">
+      <div class="col-md-12">
+        <% @abouts.where(title: :About).each do |about| %>
+          <h3 class="border-title animate" data-delay="100" data-animation="animated fadeInDown">
+            <%= about.title %>
+          </h3>
+          <p>
+           <%= raw about.description %>
+          </p>
+          <% if user_signed_in? %>
+            <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
+            <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
+          <% end %>
+        <% end %>
+    </div>
+
+
+    <div class="col-md-12">
+      <% @abouts.where(:title => "Mission").each do |about| %>
+        <h3 class="border-title animate" data-delay="100" data-animation="animated fadeInDown">
           <%= about.title %>
-        </h2>
-<!-- <div class="col-md-6">
-    <%#= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
-  </div> -->
-  <center>
-    <p>
-     <%= raw about.description %>
-   </p>
- </center>
-<% if user_signed_in? %>
-<%= link_to "Edit", edit_about_path(about),class: "z-back" %>
-<%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
-<% end %>
-<% end %>
-</div>
-
-
-<div class="col-md-6">
-  <% @abouts.where(:title => "Our Mission").each do |about| %>
-      <h2 class="border-title aligncenter">
-        <%= about.title %>
-      </h2>
-<!-- <div class="col-md-6">
-    <%#= image_tag about.image.url, alt: "", class: "dt-sc-border-radius"%>
-  </div> -->
-
-  <center>
-   <%= raw about.description %>
- </center>
-  <% if user_signed_in? %>
-  <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
-  <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
-  <% end %>
-<% end %>
-</div>
-</div>
+        </h3>
+        <%= raw about.description %>
+        <% if user_signed_in? %>
+        <%= link_to "Edit", edit_about_path(about),class: "z-back" %>
+        <%= link_to "Delete", about_path(about), method: :delete, data: { confirm: 'Are you sure?' },class: "z-back" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -76,7 +65,7 @@
 <div class="fullwidth-section dt-sc-parallax-section dt-sc-work-parallax">
   <div class="fullwidth-bg">
     <div class="container">
-      <div class="hr-invisible"></div>
+      <div class="hr-invisible" id="whyus"></div>
       <div class="clear"></div>
       <h2 class="border-title aligncenter animate" data-delay="100" data-animation="animated fadeInDown">
         Why People Choose Us?
@@ -89,7 +78,7 @@
         <div class="dt-sc-toggle-frame-set">
           <div class="dt-sc-frame">
             <div class="dt-sc-content" style="color: #fff;">
-              <p>
+              <p class="whyus">
                 <%= raw about.description %>
               </p>
               <br/>
@@ -107,3 +96,10 @@
     <div class="hr-invisible"></div>
     <div class="clear"></div>
     <div class="hr-invisible"></div>
+
+
+    <style>
+      .whyus ul li {
+        list-style: disc;
+      }
+    </style>
