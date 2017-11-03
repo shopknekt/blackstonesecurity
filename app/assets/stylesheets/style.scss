@@ -10,11 +10,13 @@ body {
     background: #2b2d2d;
     line-height: normal;
 }
-p, * {
+span, p{
+    font-family: 'Josefin Sans', sans-serif!important;
+}
+* {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif!important;
 }
 
 
