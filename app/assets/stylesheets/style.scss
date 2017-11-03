@@ -5364,7 +5364,6 @@ figure.photostack-current::after {
 }
 #z-homeslider > .carousel-inner > .item > img,
 #z-homeslider > .carousel-inner > .item > a > img {
-  opacity: 0.3;
   margin: auto;
   width: 100% !important;
 }
@@ -5413,6 +5412,7 @@ figure.photostack-current::after {
   width: 100%;
   text-align: center;
   position: absolute;
+  background: rgba(0, 0, 0, 0.5);
 }
 .z-homeslider-section-s .z-homeslider-Wrapper  > h3 {
   color: #ffffff;
