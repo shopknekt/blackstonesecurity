@@ -10,7 +10,7 @@ body {
     background: #2b2d2d;
     line-height: normal;
 }
-span, p{
+span, p, a, li, div {
     font-family: 'Josefin Sans', sans-serif!important;
 }
 * {
@@ -19,6 +19,13 @@ span, p{
     box-sizing: border-box;
 }
 
+p {
+    font-size: 17px;
+}
+
+li {
+    list-style: disc;
+}
 
 body,
 textarea,
@@ -259,7 +266,8 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: #000000;
+    color: #fff;
+    background: transparent;
 }
 a img {
     border: none;
@@ -1024,9 +1032,10 @@ a.dt-menu-expand {
 }
 
 #logo a span{
-    font-family: 'Manuale', serif!important;
-    font-size: 45px;
+    font-family: "Manuale", serif !important;
+    font-size: 50px;
     font-weight: 600;
+    letter-spacing: 5px;
 }
 #logo a {
     width: 100%;
