@@ -31,4 +31,4 @@
 //= require scrolling-nav 
 
 
- 
+ //= require serviceworker-companion

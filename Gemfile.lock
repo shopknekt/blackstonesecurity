@@ -184,6 +184,8 @@ GEM
     seed_dump (3.2.4)
       activerecord (>= 4)
       activesupport (>= 4)
+    serviceworker-rails (0.5.5)
+      railties (>= 3.1)
     simple_form (3.5.0)
       actionpack (> 4, < 5.2)
       activemodel (> 4, < 5.2)
@@ -244,6 +246,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   seed_dump
+  serviceworker-rails
   simple_form
   social-share-button
   spring

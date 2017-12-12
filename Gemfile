@@ -24,6 +24,8 @@ gem 'seed_dump'
 gem 'simple_form'
 gem 'ratyrate'
 gem 'carrierwave', '~> 1.0'
+gem 'serviceworker-rails'
+
 
 group :development, :test do
   gem 'byebug'
