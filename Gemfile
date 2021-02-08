@@ -24,7 +24,7 @@ gem 'capistrano-rails'
 gem 'seed_dump'
 gem 'simple_form'
 gem 'ratyrate'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 
 group :development, :test do
   gem 'byebug'
